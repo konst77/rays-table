@@ -41,7 +41,7 @@ export function BottomNavbar() {
 
   return (
     <div className="fixed bottom-6 left-0 right-0 z-50 hidden md:flex justify-center">
-      <nav className="flex items-center gap-1 rounded-[8px] bg-black/80 px-4 py-2 shadow-lg backdrop-blur-xl border border-black/20">
+      <nav className="flex items-center gap-1 rounded-[8px] border-gray-800 bg-black/80 px-4 py-2 shadow-lg backdrop-blur-xl border border-black/20">
         {navItems.map((item) => (
           <Button
             key={item.href}
