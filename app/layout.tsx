@@ -3,6 +3,7 @@ import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { BottomNavbar } from "./components/bottom-nav"
 import { MobileNav } from "./components/mobile-nav";
+import Footer from "./components/Footer";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <BottomNavbar />
         <MobileNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

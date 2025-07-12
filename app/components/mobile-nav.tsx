@@ -52,9 +52,9 @@ export function MobileNav() {
                 </a>
               </Button>
               <Button variant="ghost" className="justify-start h-12 text-left" asChild>
-                <a href="/articles" className="flex items-center gap-3">
+                <a href="/blog" className="flex items-center gap-3">
                   <FileText className="h-5 w-5" />
-                  <span className="text-base">Articles</span>
+                  <span className="text-base">Blog</span>
                 </a>
               </Button>
             </div>

@@ -29,8 +29,8 @@ export function BottomNavbar() {
     },
     {
       icon: <Newspaper className="h-5 w-5" />,
-      href: "/articles",
-      label: "Articles",
+      href: "/blog",
+      label: "Blog",
     },
     {
       icon: <Info className="h-5 w-5" />,
