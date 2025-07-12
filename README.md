@@ -42,3 +42,6 @@ Encountered an error with Sanity while remotely working with two different compu
 
 ## 7/12/25
 Deleted Sanity and ran vercel, but did failed to install dependiencies with the log issueing sanity.
+Found a node_module including next-sanity + sanity, deleted them, and re-installed npm. Worked.
+Deleted the studio folder as it failed to find its modules for build.
+Successful. Deployment complete.
