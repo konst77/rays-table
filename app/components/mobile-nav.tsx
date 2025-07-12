@@ -9,12 +9,12 @@ export function MobileNav() {
         {/* View Recipes Button - spans 3 columns */}
         <Button
           variant="ghost"
-          className="col-span-3 h-full rounded-none border-r border-white/20 flex items-center justify-center gap-2 text-white hover:text-white/90 hover:bg-orange-500/50 active:bg-white/20 font-medium"
+          className="col-span-3 h-full rounded-none border-r border-white/20 flex items-center justify-center gap-2 text-white hover:text-white/90 bg-orange-500 hover:bg-orange-500/80 active:bg-white/20 font-medium"
         >
-            <a href="/recipes" className="flex items-center jusitfy-center gap-2">
-                <ChefHat className="h-5 w-5" />
-                <span className="font-medium">View Recipes</span>
-            </a>
+          <a href="/recipes" className="flex items-center jusitfy-center gap-2">
+            <ChefHat className="h-5 w-5" />
+            <span className="font-medium">View Recipes</span>
+          </a>
         </Button>
 
         {/* Menu Sheet - spans 1 column */}
@@ -22,7 +22,7 @@ export function MobileNav() {
           <SheetTrigger asChild>
             <Button
               variant="ghost"
-              className="col-span-1 h-full rounded-none flex items-center justify-center text-white hover:text-white/90 hover:bg-orange-500/50 active:bg-white/20"
+              className="col-span-1 h-full rounded-none flex items-center justify-center text-white hover:text-white/90 hover:bg-orange-500/80 active:bg-white/20"
             >
               <Menu className="h-6 w-6" />
             </Button>

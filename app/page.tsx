@@ -20,7 +20,7 @@ export default function Home() {
               className="image col-span-full w-full h-[40px]"
               priority={true}
             />
-            <h1 className="text-[32px] md:text-[56px] leading-[1.15]">
+            <h1 className="text-[48px] md:text-[56px] leading-[1.15]">
               Recipes with soul.
               <br />
               Stories with flavor.
@@ -50,46 +50,54 @@ export default function Home() {
         </Grids>
       </Grids>
 
+      {/* Value Proposition */}
       <Grids className="bg-[#fff] text-[#000]">
-        <Grids className='md:col-span-full border border-[#f1f1f5] md:gap-10'>
+        <Grids className='md:col-span-full border border-[#f1f1f5] md:gap-10 md:h-[900px]'>
           <div className="p-4 md:p-10">
-            <h2 className="text-[28px] md:text-[48px] leading-[1.15]">Why Ray's Table?</h2>
-          </div>
-          <div className="flex flex-col gap-10 md:col-start-3 p-4 md:p-10">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[18px] md:text-[28px] md:leading-[1.5]">
-                <span className="text-orange-500">✦ </span>Storytelling first
-              </h3>
-              <p className="text-[14px] leading-[1.45] md:text-[18px] text-[#767676]">
-                Recipes that bring memories, feelings, and connection to the table.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[18px] md:text-[28px] md:leading-[1.5]">
-                <span className="text-orange-500">✦ </span>Simple & healthy (without pressure)
-              </h3>
-              <p className="text-[14px] leading-[1.45] md:text-[18px] text-[#767676]">
-                No stress. No fluff. Just feel-good food made accessible.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-[18px] md:text-[28px] md:leading-[1.5]">
-                <span className="text-orange-500">✦ </span> Real, kind, and funny
-              </h3>
-              <p className="text-[14px] leading-[1.45] md:text-[18px] text-[#767676]">
-                You're not alone in the kitchen. We laugh, spill, and eat together.
-              </p>
-            </div>
+            <h2 className="text-[40px] md:text-[48px] leading-[1.15]">Why Ray's Table?</h2>
           </div>
           <OptimizedImage
             src={dummy.src}
             alt=""
             height={400}
             width={1200}
-            className="w-full md:col-span-1"
+            className="w-full md:col-span-1 self-end"
             priority={true}
           />
+          <div className="flex flex-col gap-10 md:col-start-3 p-4 md:p-10">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-[24px] md:text-[32px] md:leading-[1.5]">
+                <span className="text-orange-500">✦ </span>Storytelling first
+              </h3>
+              <p className="text-[16px] leading-[1.45] md:text-[18px] text-[#767676]">
+                Recipes that bring memories, feelings, and connection to the table.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-[24px] md:text-[32px] md:leading-[1.5]">
+                <span className="text-orange-500">✦ </span>Simple & healthy (without pressure)
+              </h3>
+              <p className="text-[16px] leading-[1.45] md:text-[18px] text-[#767676]">
+                No stress. No fluff. Just feel-good food made accessible.
+              </p>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-[24px] md:text-[32px] md:leading-[1.5]">
+                <span className="text-orange-500">✦ </span> Real, kind, and funny
+              </h3>
+              <p className="text-[16px] leading-[1.45] md:text-[18px] text-[#767676]">
+                You're not alone in the kitchen. We laugh, spill, and eat together.
+              </p>
+            </div>
+          </div>
         </Grids>
+      </Grids>
+
+      {/* Recipe overlooking */}
+      <Grids className="bg-black">
+        <div>
+
+        </div>
       </Grids>
     </>
   );
