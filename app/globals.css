@@ -112,7 +112,17 @@
 
     --chart-4: 280 65% 60%;
 
-    --chart-5: 340 75% 55%}}
+    --chart-5: 340 75% 55%}
+  
+
+    p {
+      font-family: var(--font-instrument-sans), sans-serif;
+    }
+
+    span {
+      font-family: var(--font-instrument-sans), sans-serif;
+    }
+  }
 
 
 

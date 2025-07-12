@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif } from "next/font/google";
+import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { BottomNavbar } from "./components/bottom-nav"
 import { MobileNav } from "./components/mobile-nav";
@@ -8,6 +8,14 @@ const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
   subsets: ["latin"],
   weight: ["400"],
+  style: ["normal"],
+});
+
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} antialiased mb-16 md:mb-0`}
+        className={`${instrumentSerif.className} ${instrumentSans.variable} antialiased mb-16 md:mb-0`}
       >
         <BottomNavbar />
         <MobileNav />
