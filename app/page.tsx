@@ -17,7 +17,7 @@ export default function Home() {
             className="image col-span-full w-full h-[40px]"
             priority={true}
           />
-          <h1 className="text-[48px] md:text-[56px] lg:text-[72px] leading-[1.15]">
+          <h1 className="text-[48px] md:text-[56px] lg:text-[64px] leading-[1.15]">
             Recipes with soul.
             <br />
             Stories with flavor.
@@ -54,16 +54,16 @@ export default function Home() {
       <Grids className="bg-white text-black md:mt-20">
         {/* Grid for featured recipes, make it dynamic? */}
         <div className="md:col-span-full p-4 md:p-10">
-          <p className="text-[40px] leading-[1.15]">
-            Just feel, read, and
+          <h4 className="text-[16px] md:text-[32px] lg:text-[40px] leading-[1.125]">
+            Just read, feel, and
             <br />
             create your dish.
-          </p>
+          </h4>
         </div>
         <div className="md:col-span-3 flex flex-row gap-6">
-          <div className="h-[640px] w-full bg-[#f3f3f3]" />
-          <div className="h-[640px] w-full bg-[#f3f3f3]" />
-          <div className="h-[640px] w-full bg-[#f3f3f3]" />
+          <div className="h-[480px] w-full bg-[#f3f3f3]" />
+          <div className="h-[480px] w-full bg-[#f3f3f3]" />
+          <div className="h-[480px] w-full bg-[#f3f3f3]" />
         </div>
       </Grids>
 
