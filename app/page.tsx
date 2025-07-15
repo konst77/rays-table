@@ -3,7 +3,9 @@ import OptimizedImage from "./components/OptimizedImage";
 import main from "@/public/img/main.svg"
 import dummy from "@/public/img/dummy-photo.jpg"
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import sangria from "@/public/img/sangria.jpg"
+import chicken from "@/public/img/rice-and-chicken.jpg"
+import curry from "@/public/img/rays-original-curry.jpg"
 
 export default function Home() {
   return (
@@ -62,10 +64,43 @@ export default function Home() {
             create your dish.
           </h4>
         </div>
-        <div className="md:col-span-3 flex flex-row gap-6">
-          <div className="h-[440px] w-full bg-[#f3f3f3]" />
-          <div className="h-[440px] w-full bg-[#f3f3f3]" />
-          <div className="h-[440px] w-full bg-[#f3f3f3]" />
+        <div className="md:col-span-3 flex flex-col md:flex-row gap-4 md:gap-6">
+          <Link
+            href={'/recipes/rice-and-chicken'}
+            className="overflow-hidden"
+          >
+            <OptimizedImage
+              alt="rice-and-chicken"
+              src={chicken.src}
+              height={1080}
+              width={1080}
+              className="w-full md:h-[440px] object-cover saturate-[1.25]"
+            />
+          </Link>
+          <Link
+            href={'/recipes/sangria'}
+            className="overflow-hidden"
+          >
+            <OptimizedImage
+              alt="Sangria"
+              src={sangria.src}
+              height={1080}
+              width={1080}
+              className="w-full md:h-[440px] object-cover saturate-[1.25]"
+            />
+          </Link>
+          <Link
+            href={'/recipes/sangria'}
+            className="overflow-hidden"
+          >
+            <OptimizedImage
+              alt="Curry"
+              src={curry.src}
+              height={1080}
+              width={1080}
+              className="w-full md:h-[440px] object-cover saturate-[1.25]"
+            />
+          </Link>
         </div>
       </Grids>
 
@@ -80,14 +115,14 @@ export default function Home() {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cooking a dish is a way for me to preserve a connection with the past. A table is how I see the whole."
           </h2>
           <div className="self-end">
-              <Link
+            <Link
               href="/about"
               className="underline text-[#767676] text-[14px]"
-              >
-                <span>
-                  Read More
-                </span>
-              </Link>
+            >
+              <span>
+                Read More
+              </span>
+            </Link>
           </div>
         </div>
         <div className="h-[440px] bg-[#f3f3f3]" />
