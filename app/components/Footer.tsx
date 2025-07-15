@@ -39,35 +39,39 @@ function Footer() {
   return (
     <div className="text-white relative">
       <Grids className="bg-black/20 backdrop-blur-3xl">
-        <div className="p-4 md:p-10 w-full">
-          <p className="text-[24px] md:text-[32px] lg:text-[40px]">
+        <div className="p-4 md:p-10 w-full md:col-span-2">
+          <p className="text-[24px] md:text-[32px]">
             Want a seat on our table?
           </p>
           <p className="text-[#767676]">
             We will minimize our sends to only table invitations.
           </p>
+
+          <form className="">
+
+          </form>
         </div>
-        <form className="col-span-2">
 
-        </form>
-
-        <div className="h-[320px] flex flex-col gap-4 text-[24px] p-4 md:p-10 items-start justify-center">
+        <div className="h-[400px] flex flex-col gap-2 p-4 md:p-10 md:col-span-1">
+          <p className="font-medium text-[18px]">Navigate</p>
           {navItems.map((item) => (
             <Link
               key={item.href}
-              href={item.href}>
+              href={item.href}
+              className="md:text-[16px] p-2 pl-0"
+              >
               <span className={cn(pathname === item.href ? "text-white duration-150 hover:text-orange-500" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{item.label}</span>
             </Link>
           ))}
         </div>
 
-        <div className="p-4 md:p-10 md:col-span-full self-end">
+        <div className="p-4 md:p-10 md:col-span-full h-[240px] relative">
           <OptimizedImage
             alt="logo"
             src={logo}
-            height={200}
+            height={280}
             width={1280}
-            className="w-full"
+            className="absolute bottom-0"
             priority={true}
           />
         </div>

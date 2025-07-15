@@ -36,8 +36,10 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.className} ${instrumentSans.variable} antialiased mb-16 md:mb-0`}
       >
+        {/* pre-launch
         <BottomNavbar />
-        <MobileNav />
+        <MobileNav /> 
+        */}
         {children}
         <Footer />
         <SpeedInsights />
