@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { BottomNavbar } from "./components/bottom-nav"
@@ -38,6 +40,8 @@ export default function RootLayout({
         <MobileNav />
         {children}
         <Footer />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,11 +1,15 @@
+import Link from "next/link";
+import React from 'react'
+import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
+import * as reactSpring from '@react-spring/three'
 import Grids from "./components/grids";
 import OptimizedImage from "./components/OptimizedImage";
 import main from "@/public/img/main.svg"
 import dummy from "@/public/img/dummy-photo.jpg"
-import Link from "next/link";
 import sangria from "@/public/img/sangria.jpg"
 import chicken from "@/public/img/rice-and-chicken.jpg"
 import curry from "@/public/img/rays-original-curry.jpg"
+import Shader from "./components/shader-gradient";
 
 export default function Home() {
   return (
@@ -129,17 +133,18 @@ export default function Home() {
       </Grids>
 
       {/* Newsletter? */}
-      <Grids className="bg-orange-500 text-white">
-        <div className="md:col-span-1 p-4 md:p-10">
-          <h2 className="text-[40px] md:text-[48px] lg:text-[56px] leading-[1.15]">
-            Let's spirit up
-            <br />
-            your table.
-          </h2>
-        </div>
-
-        {/* Form Field for Email signup */}
-      </Grids>
+      <div className="h-[640px] text-white relative">
+        <Grids className="">
+          <div className="md:col-span-1 p-4 md:p-10">
+            <h2 className="text-[40px] md:text-[48px] lg:text-[56px] leading-[1.15]">
+              Let's spirit up
+              <br />
+              your table.
+            </h2>
+          </div>
+          {/* Form Field for Email signup */}
+        </Grids>
+      </div>
     </>
   );
 }
