@@ -75,9 +75,9 @@ export default function Home() {
 
       {/* About Ray */}
       <Grids className="">
-        <div className="p-4 flex flex-col md:col-span-2 md:justify-between">
+        <div className="p-4 flex flex-col md:p-0 md:col-span-2 md:justify-between md:pl-10">
           <h2 className="text-[40px] md:text-[48px] lg:text-[56px] leading-[1.15]">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cooking is a way for me to preserve a connection with the past. A table is how I see the whole."
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cooking a dish is a way for me to preserve a connection with the past. A table is how I see the whole."
           </h2>
           <div className="self-end">
               <Link
@@ -95,9 +95,15 @@ export default function Home() {
 
       {/* Newsletter? */}
       <Grids className="bg-orange-500 text-white">
-        <div>
-
+        <div className="md:col-span-1 p-4 md:p-10">
+          <h2 className="text-[40px] md:text-[48px] lg:text-[56px] leading-[1.15]">
+            Let's spirit up
+            <br />
+            your table.
+          </h2>
         </div>
+
+        {/* Form Field for Email signup */}
       </Grids>
     </>
   );
