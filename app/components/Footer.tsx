@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Shader from "./shader-gradient"
+import SubscribeForm from "./email/SubscribeForm"
 
+console.log(process.env.SUPABASE_ANON_KEY)
 interface NavItem {
   href: string
   label: string
@@ -43,24 +45,23 @@ function Footer() {
           <p className="text-[24px] md:text-[32px]">
             Want a seat on our table?
           </p>
-          <p className="text-[#767676]">
+          <p className="text-[#999]">
             We will minimize our sends to only table invitations.
           </p>
 
-          <form className="">
-
-          </form>
+          {/* Form area */}
+          <SubscribeForm />
         </div>
 
-        <div className="h-[400px] flex flex-col gap-2 p-4 md:p-10 md:col-span-1">
-          <p className="font-medium text-[18px]">Navigate</p>
+        <div className="md:h-[400px] flex flex-col items-start p-4 md:p-10 md:col-span-1">
+          <p className="text-[18px] mb-4">Navigate</p>
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="md:text-[16px] p-2 pl-0"
-              >
-              <span className={cn(pathname === item.href ? "text-white duration-150 hover:text-orange-500" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{item.label}</span>
+              className="md:text-[16px]"
+            >
+              <span className={cn(pathname === item.href ? "duration-150 text-orange-500 hover:text-orange-300" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{item.label}</span>
             </Link>
           ))}
         </div>
