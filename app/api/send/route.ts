@@ -20,24 +20,24 @@ export async function POST(req: NextRequest) {
 
     // 3. Insert into Supabase
     const { error: dbError } = await supabase
-      .from('newsletter_subscription_emails') // ✅ Confirm table name exactly matches Supabase
+      .from('email_list') // ✅ Confirm table name exactly matches Supabase
       .insert([{ email }]);
 
-      if (dbError) {
-        if (dbError.code === '23505') { // unique_violation in PostgreSQL
-          console.warn('⚠️ Email already exists in database:', email);
-          return NextResponse.json({ message: 'Email already subscribed.' }, { status: 409 }); // 409 Conflict
-        }
-      
-        console.error('🔥 Supabase insert error:', dbError);
-        return NextResponse.json({ message: 'Database error' }, { status: 500 });
+    if (dbError) {
+      if (dbError.code === '23505') { // unique_violation in PostgreSQL
+        console.warn('⚠️ Email already exists in database:', email);
+        return NextResponse.json({ message: 'Email already subscribed.' }, { status: 409 }); // 409 Conflict
       }
+
+      console.error('🔥 Supabase insert error:', dbError);
+      return NextResponse.json({ message: 'Database error' }, { status: 500 });
+    }
 
     console.log('✅ Email stored in Supabase:', email);
 
     // 4. Send confirmation email via Resend
     const emailResponse = await resend.emails.send({
-      from: 'onboarding@resend.dev', // ✅ Use this if konstdesignstudio@gmail.com is not verified
+      from: `Ray's Table <ray@tablebyray.com>`, // ✅ Use this if konstdesignstudio@gmail.com is not verified
       to: email,
       subject: 'Thanks for Subscribing!',
       html: '<p>Thank you for subscribing to our newsletter! 🎉</p>',

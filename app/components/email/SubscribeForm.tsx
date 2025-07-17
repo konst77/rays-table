@@ -34,7 +34,7 @@ export default function SubscribeForm() {
         });
         setEmail('');
       } else {
-        toast.error(data.message || 'Something went wrong.');
+        toast.error(data.message || 'Uh oh, something went wrong 😓');
       }
     } catch (error) {
       console.error('Network error:', error);
