@@ -46,7 +46,7 @@ function Footer() {
             Want a seat on our table?
           </p>
           <p className="text-[#999]">
-            We will minimize our sends to only table invitations.
+            We will minimize our sends to only table stories and invitations.
           </p>
 
           {/* Form area */}

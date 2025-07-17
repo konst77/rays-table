@@ -16,7 +16,7 @@ export default function Home() {
     <>
       {/* Landing header */}
       <Grids className="bg-black text-[#fff]">
-        <div className="flex flex-col items-start gap-4 md:pt-0 md:p-10 p-4 md:col-span-1">
+        <div className="flex flex-col items-start gap-4 md:pt-0 md:pr-0 md:p-10 p-4 md:col-span-1">
           <OptimizedImage
             src={main.src}
             height={40}

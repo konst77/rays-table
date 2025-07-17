@@ -5,35 +5,52 @@ import { supabase } from '@/lib/supabase';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
+  try {
+    // 1. Read incoming request
     const body = await req.json();
+    console.log('📨 Incoming request body:', body);
+
     const { email } = body;
 
+    // 2. Validate email
     if (!email || typeof email !== 'string') {
-        return NextResponse.json({ message: 'Invalid email provided' }, { status: 400 });
+      console.error('❌ Invalid or missing email:', email);
+      return NextResponse.json({ message: 'Invalid email provided' }, { status: 400 });
     }
 
-    try {
-        // 1. Store email in Supabase
-        const { data, error } = await supabase
-            .from('subscribers')
-            .insert([{ email }]);
+    // 3. Insert into Supabase
+    const { error: dbError } = await supabase
+      .from('newsletter_subscription_emails') // ✅ Confirm table name exactly matches Supabase
+      .insert([{ email }]);
 
-        if (error) {
-            console.error('Supabase Insert Error:', error.message);
-            return NextResponse.json({ message: 'Email already subscribed or error occurred' }, { status: 400 });
+      if (dbError) {
+        if (dbError.code === '23505') { // unique_violation in PostgreSQL
+          console.warn('⚠️ Email already exists in database:', email);
+          return NextResponse.json({ message: 'Email already subscribed.' }, { status: 409 }); // 409 Conflict
         }
+      
+        console.error('🔥 Supabase insert error:', dbError);
+        return NextResponse.json({ message: 'Database error' }, { status: 500 });
+      }
 
-        // 2. Send confirmation email via Resend
-        await resend.emails.send({
-            from: `Ray's Table <konstdesignstudio@gmail.com>`,
-            to: email,
-            subject: 'Thanks for Subscribing!',
-            html: '<p>Welcome to our newsletter. 🎉</p>',
-        });
+    console.log('✅ Email stored in Supabase:', email);
 
-        return NextResponse.json({ message: 'Subscribed and confirmation email sent!' });
-    } catch (err: any) {
-        console.error(err);
-        return NextResponse.json({ message: 'Subscription failed' }, { status: 500 });
-    }
+    // 4. Send confirmation email via Resend
+    const emailResponse = await resend.emails.send({
+      from: 'onboarding@resend.dev', // ✅ Use this if konstdesignstudio@gmail.com is not verified
+      to: email,
+      subject: 'Thanks for Subscribing!',
+      html: '<p>Thank you for subscribing to our newsletter! 🎉</p>',
+    });
+
+    console.log('📤 Resend email response:', emailResponse);
+
+    return NextResponse.json(
+      { message: 'Subscribed and confirmation email sent!' },
+      { status: 200 }
+    );
+  } catch (err: any) {
+    console.error('💥 Internal server error:', err.message, err.stack);
+    return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
+  }
 }

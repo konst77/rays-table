@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner"
 import { BottomNavbar } from "./components/bottom-nav"
 import { MobileNav } from "./components/mobile-nav";
 import Footer from "./components/Footer";
@@ -41,6 +42,7 @@ export default function RootLayout({
         <MobileNav /> 
         */}
         {children}
+        <Toaster />
         <Footer />
         <SpeedInsights />
         <Analytics />
