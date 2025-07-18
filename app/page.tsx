@@ -78,7 +78,7 @@ export default function Home() {
               src={chicken.src}
               height={1080}
               width={1080}
-              className="w-full md:h-[440px] object-cover saturate-[1.25]"
+              className="w-full md:h-[560px] object-cover saturate-[1.25]"
             />
           </Link>
           <Link
@@ -90,7 +90,7 @@ export default function Home() {
               src={sangria.src}
               height={1080}
               width={1080}
-              className="w-full md:h-[440px] object-cover saturate-[1.25]"
+              className="w-full md:h-[560px] object-cover saturate-[1.25]"
             />
           </Link>
           <Link
@@ -102,7 +102,7 @@ export default function Home() {
               src={curry.src}
               height={1080}
               width={1080}
-              className="w-full md:h-[440px] object-cover saturate-[1.25]"
+              className="w-full md:h-[560px] object-cover saturate-[1.25]"
             />
           </Link>
         </div>

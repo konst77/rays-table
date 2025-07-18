@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { createClient } from '@/utils/supabase/client';
 import { useRouter } from 'next/navigation';
+import NewsletterGenerator from './component/NewsletterGenerator';
 
 function page() {
     const supabase = createClient()
@@ -18,6 +19,7 @@ function page() {
     }
     return (
         <div>
+            <NewsletterGenerator />
             <Button
                 onClick={handleSignOut}
                 className=""
