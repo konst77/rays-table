@@ -11,6 +11,8 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
+    "@react-email/components": "0.3.2",
+    "@react-email/img": "0.0.11",
     "@react-spring/three": "^10.0.1",
     "@react-three/fiber": "^9.2.0",
     "@shadergradient/react": "^2.1.2",
