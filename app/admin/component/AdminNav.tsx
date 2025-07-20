@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import OptimizedImage from '@/app/components/OptimizedImage'
 import { Button } from '@/components/ui/button'
 import React from 'react'
-import logo from '@/public/img/main.svg'
+import logo from '@/public/img/logo.jpg'
 
 function AdminNav() {
 
@@ -28,7 +28,7 @@ function AdminNav() {
                 height={40}
                 width={80}
                 src={logo.src}
-                className=''
+                className='bg-none'
                 />
                 <Button
                     onClick={handleSignOut}

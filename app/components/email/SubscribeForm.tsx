@@ -59,12 +59,42 @@ export default function SubscribeForm() {
         disabled={isLoading}
       />
       <button
-        type="submit"
-        className="bg-orange-500 text-white px-4 py-2 rounded-full disabled:opacity-50"
-        disabled={isLoading}
-      >
-        {isLoading ? 'Subscribing...' : 'Subscribe'}
-      </button>
+  type="submit"
+  className="bg-orange-500 text-white px-4 py-2 rounded-full disabled:opacity-50 flex items-center justify-center gap-2 transition duration-150"
+  disabled={isLoading}
+>
+  {isLoading ? (
+    <>
+      <svg
+  className="w-6 h-6 animate-spin text-white"
+  viewBox="0 0 100 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  {/* Outer circle */}
+  <circle
+    cx="50"
+    cy="50"
+    r="40"
+    stroke="currentColor"
+    strokeOpacity="0.2"
+    strokeWidth="8"
+/>
+
+  {/* Orbiting inner circle (placed on the edge of the ring) */}
+  <circle
+    cx="50"
+    cy="10"
+    r="6"
+    fill="currentColor"
+/>
+</svg>
+      Subscribing...
+    </>
+  ) : (
+    'Subscribe'
+  )}
+</button>
     </form>
   );
 }

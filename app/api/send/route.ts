@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
     // 4. Send confirmation email via Resend
     const emailResponse = await resend.emails.send({
       from: `Ray's Table <ray@tablebyray.com>`, // ✅ Use this if konstdesignstudio@gmail.com is not verified
-      to: 'konstdesignstudio@gmail.com',
+      to: email,
       subject: `Welcome to the Table`,
       react: WelcomeEmail(),
     });
