@@ -12,7 +12,6 @@ function Call() {
     return (
         <Button
             onClick={scrollToSection}
-            className='mt-10'
         >
             <p>
                 Join our newsletter

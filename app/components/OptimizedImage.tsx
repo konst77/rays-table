@@ -26,7 +26,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         height={height}
         priority={priority}
         placeholder="blur" // Optional: Add a blur placeholder
-        blurDataURL="/placeholder.png" // Replace with your placeholder image
+        blurDataURL="https://placehold.co/600x400@2x.png" // Replace with your placeholder image
         quality={75} // Adjust image quality (default is 75)
       />
     </div>

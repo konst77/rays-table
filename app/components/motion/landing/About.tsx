@@ -36,7 +36,7 @@ function About() {
                             <h1 className=''>
                                 {
                                     phrase.split(" ").map((word, index) => {
-                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>
+                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-3'>
                                             <motion.span variants={slideUp}
                                                 custom={index}
                                                 animate={isInView ? "open" : "closed"}

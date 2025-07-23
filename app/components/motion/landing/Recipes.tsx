@@ -1,13 +1,16 @@
 'use client'
 
+import { Button } from '@/components/ui/button'
 import Grids from '../../grids'
+import Card from './component/Card'
+import Link from 'next/link'
 import { useRef } from 'react'
 import { useInView, motion, AnimatePresence } from 'motion/react'
 
-function Phrase() {
-    const phrase = 'We tell beautiful stories, focusing on simple and healthy meals, and to see you live your moment.'
-    const description = useRef(null)
-    const isInView = useInView(description)
+function Recipes() {
+    const phrase = "Take a glimpse on our table while you walk by."
+    const feature = useRef(null)
+    const isInView = useInView(feature)
 
     const slideUp = {
         initial: {
@@ -25,14 +28,13 @@ function Phrase() {
 
     return (
         <AnimatePresence>
-            <Grids className='bg-[#fff] text-[#000] my-40 md:py-40 md:p-10'>
-                <div className="flex flex-col gap-10 p-4 md:p-10 md:col-span-2 self-center
-            text-[40px] md:text-[56px] lg:text-[80px] leading-[1.15]
-            ">
-                    <p className='text-[12px] md:text-[14px] font-bold uppercase text-orange-500'>What we do</p>
-                    <div ref={description}>
+            <Grids className="bg-white text-black my-40 md:mt-20">
+                {/* Grid for featured recipes, make it dynamic? */}
+                <div className="flex flex-col md:col-span-2 p-4 md:p-10 gap-4 md:gap-10">
+                    <p className='text-[14px] font-bold uppercase text-orange-500'>Featured Recipes</p>
+                    <div ref={feature}>
                         <div className='flex relative'>
-                            <h1>
+                            <h2 className='text-[56px] leading-[1.15]'>
                                 {
                                     phrase.split(" ").map((word, index) => {
                                         return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>
@@ -45,13 +47,26 @@ function Phrase() {
                                         </span>
                                     })
                                 }
-                            </h1>
+                            </h2>
                         </div>
                     </div>
                 </div>
-            </Grids >
+                <div className="flex flex-col items-start md:col-span-1 p-4 md:p-10 gap-4 md:gap-10">
+                    <Link
+                        href={'/recipes'}
+                        className='self-end'
+                    >
+                        <Button variant={'link'}>
+                            <p className='text-[#767676]'>
+                                View all
+                            </p>
+                        </Button>
+                    </Link>
+                </div>
+                <Card />
+            </Grids>
         </AnimatePresence>
     )
 }
 
-export default Phrase
+export default Recipes
