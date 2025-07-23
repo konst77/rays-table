@@ -1,8 +1,8 @@
 import React from 'react'
-import SubscribeForm from './components/email/SubscribeForm'
 import Shader from './components/shader-gradient'
 import OptimizedImage from './components/OptimizedImage'
 import logo from '@/public/img/main.svg'
+import DemoForm from './components/email/DemoForm'
 
 function RootPage() {
   return (
@@ -21,7 +21,7 @@ function RootPage() {
         </p>
 
         {/* Form Fields */}
-        <SubscribeForm />
+        <DemoForm />
 
         {/* Social Links */}
         <div>
