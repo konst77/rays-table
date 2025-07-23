@@ -39,7 +39,7 @@ function Footer() {
   ]
 
   return (
-    <div className="text-white relative">
+    <div id="newsletter" className="text-white relative">
       <Grids className="bg-black/20 backdrop-blur-3xl">
         <div className="p-4 md:p-10 w-full md:col-span-2">
           <p className="text-[24px] md:text-[32px]">
@@ -61,7 +61,7 @@ function Footer() {
               href={item.href}
               className="md:text-[16px]"
             >
-              <span className={cn(pathname === item.href ? "duration-150 text-orange-500 hover:text-orange-300" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{item.label}</span>
+              <p className={cn(pathname === item.href ? "duration-150 text-orange-500 hover:text-orange-300" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{item.label}</p>
             </Link>
           ))}
         </div>

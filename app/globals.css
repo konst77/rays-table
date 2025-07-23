@@ -123,7 +123,7 @@
   }
 
   span {
-    font-family: var(--font-instrument-sans), sans-serif;
+    font-family: var(--font-instrument-serif), serif;
   }
 
   input {

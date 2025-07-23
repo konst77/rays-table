@@ -10,12 +10,16 @@ import sangria from "@/public/img/sangria.jpg"
 import chicken from "@/public/img/rice-and-chicken.jpg"
 import curry from "@/public/img/rays-original-curry.jpg"
 import Shader from "./components/shader-gradient";
+import Phrase from "./components/motion/landing/Phrase";
+import About from "./components/motion/landing/About";
+import { Button } from "@/components/ui/button";
+import Call from "./components/motion/landing/Call";
 
 export default function Home() {
   return (
     <>
       {/* Landing header */}
-      <Grids className="bg-black text-[#fff]">
+      <Grids className="bg-black text-[#fff] h-screen md:h-full">
         <div className="flex flex-col items-start gap-4 md:pt-0 md:pr-0 md:p-10 p-4 md:col-span-1">
           <OptimizedImage
             src={main.src}
@@ -30,6 +34,11 @@ export default function Home() {
             <br />
             Stories with flavor.
           </h1>
+
+          <p className="text-[14px] text-[#767676] md:text-[18px]">A place for clarity, choice, and passion.</p>
+
+          <Call />
+
         </div>
         {/*dummy photo*/}
         <OptimizedImage
@@ -42,27 +51,13 @@ export default function Home() {
       </Grids>
 
       {/* Value Proposition */}
-      <Grids className='bg-[#fff] text-[#000] md:h-[640px] md:p-10'>
-        <div className="flex flex-col gap-10 p-4 md:p-10 md:col-span-full self-center
-        text-[40px] md:text-[56px] lg:text-[80px] leading-[1.15]
-        ">
-          <div className="flex flex-col self-center text-center">
-            <h2 className="">
-              We tell beautiful stories,
-              <br />
-              focusing on simple and healthy meals,
-              <br />
-              and to see you live your moment.
-            </h2>
-          </div>
-        </div>
-      </Grids>
+      <Phrase />
 
       {/* Recipe overlooking */}
       <Grids className="bg-white text-black md:mt-20">
         {/* Grid for featured recipes, make it dynamic? */}
         <div className="md:col-span-full p-4 md:p-10">
-          <h4 className="text-[16px] md:text-[32px] lg:text-[40px] leading-[1.125]">
+          <h4 className="text-[24px] md:text-[32px] lg:text-[40px] leading-[1.125]">
             Just read, feel, and
             <br />
             create your dish.
@@ -113,24 +108,7 @@ export default function Home() {
       </Grids>
 
       {/* About Ray */}
-      <Grids className="">
-        <div className="p-4 flex flex-col md:p-0 md:col-span-2 md:justify-between md:pl-10">
-          <h2 className="text-[40px] md:text-[48px] lg:text-[56px] leading-[1.15]">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Cooking a dish is a way for me to preserve a connection with the past. A table is how I see the whole."
-          </h2>
-          <div className="self-end">
-            <Link
-              href="/about"
-              className="underline text-[#767676] text-[14px]"
-            >
-              <span>
-                Read More
-              </span>
-            </Link>
-          </div>
-        </div>
-        <div className="h-[440px] bg-[#f3f3f3]" />
-      </Grids>
+      <About />
 
       {/* Newsletter? */}
       <div className="h-[640px] text-white relative">
