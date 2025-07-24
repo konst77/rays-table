@@ -34,7 +34,7 @@ function Recipes() {
                     <p className='text-[14px] font-bold uppercase text-orange-500'>Featured Recipes</p>
                     <div ref={feature}>
                         <div className='flex relative'>
-                            <h2 className='text-[56px] leading-[1.15]'>
+                            <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
                                 {
                                     phrase.split(" ").map((word, index) => {
                                         return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>

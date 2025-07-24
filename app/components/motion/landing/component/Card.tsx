@@ -17,7 +17,7 @@ const recipes = [
         height: 560,
         width: 560,
         className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "#ffffff"
+        color: "EEE3AB"
     },
     {
         title: "Ray's Original Curry",
@@ -28,7 +28,7 @@ const recipes = [
         height: 560,
         width: 560,
         className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "#131313"
+        color: "80A1C1"
     },
     {
         title: "Sweet Dreams Sangria",
@@ -39,7 +39,7 @@ const recipes = [
         height: 560,
         width: 560,
         className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "#333333"
+        color: "D9CFC1"
     },
     {
         title: "Clam Clam, Vongole",
@@ -50,7 +50,7 @@ const recipes = [
         height: 560,
         width: 560,
         className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "#131313"
+        color: "BA3F1D"
     }
 ]
 
@@ -69,7 +69,7 @@ function Card() {
             transition: { duration: 0.7, delay: 0.25 * i }
         }),
         closed: {
-            y: "25%",
+            y: "-25%",
             opacity: 0,
             transition: { duration: 0.5 }
         }
@@ -87,7 +87,9 @@ function Card() {
                                         custom={index}
                                         animate={isInView ? "open" : "closed"}
                                         className='flex flex-col md:grid md:grid-cols-2 max-h-[440px]'>
-                                        <div className={`p-4 md:p-10 h-full flex flex-col  order-2 md:order-1 items-start justify-between bg-[${recipes.color}]`}>
+                                        <div className='p-4 md:p-10 h-full flex flex-col  order-2 md:order-1 items-start justify-between'
+                                            style={{ backgroundColor: `#${recipes.color}` }}
+                                        >
                                             <div className='flex flex-col gap-4 md:gap-8'>
                                                 <h3 className='text-[24px] md:text-[32px] leading-[1.15]'>
                                                     {recipes.title}

@@ -26,6 +26,23 @@ function About() {
         }
     }
 
+    const imgSlideUp = {
+        initial: {
+            y: "25%",
+            opacity: 0
+        },
+        open: (i: number) => ({
+            y: "0%",
+            opacity: 1,
+            transition: { duration: 0.7, delay: 0.25 * i }
+        }),
+        closed: {
+            y: "-5%",
+            opacity: 0,
+            transition: { duration: 0.5 }
+        }
+    }
+
     return (
         <AnimatePresence>
             <Grids className="">
@@ -60,13 +77,20 @@ function About() {
                         </Link>
                     </div>
                 </div>
-                <OptimizedImage
-                    alt='profile-photo'
-                    src={profile.src}
-                    height={1080}
-                    width={800}
-                    className='object-cover'
-                />
+                <div className='overflow-hidden relative'>
+                    <motion.div
+                        variants={imgSlideUp}
+                        animate={isInView ? "open" : "closed"}
+                    >
+                        <OptimizedImage
+                            alt='profile-photo'
+                            src={profile.src}
+                            height={1080}
+                            width={800}
+                            className='object-cover'
+                        />
+                    </motion.div>
+                </div>
             </Grids>
         </AnimatePresence>
     )
