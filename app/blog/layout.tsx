@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function AdminLayout({
     children,
 }: Readonly<{
@@ -5,10 +7,12 @@ export default function AdminLayout({
 }>) {
     return (
         <html lang="en">
-            <body
+            <div
+                className='antialiased mb-16 md:mb-0'
             >
                 {children}
-            </body>
+                <Footer />
+            </div>
         </html>
     );
 }

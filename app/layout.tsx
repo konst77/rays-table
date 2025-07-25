@@ -6,7 +6,6 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import { BottomNavbar } from "./components/bottom-nav"
 import { MobileNav } from "./components/mobile-nav";
-import Footer from "./components/Footer";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -43,7 +42,6 @@ export default function RootLayout({
         */}
         {children}
         <Toaster />
-        <Footer />
         <SpeedInsights />
         <Analytics />
       </body>

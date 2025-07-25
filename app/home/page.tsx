@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import About from "../components/motion/landing/About";
 import Hero from "../components/motion/landing/Hero";
 import Phrase from "../components/motion/landing/Phrase";
@@ -24,6 +25,9 @@ export default function Home() {
             <About />
 
             {/* Newsletter? */}
+
+            {/* Footer */}
+            <Footer />
 
         </>
     );

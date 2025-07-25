@@ -45,7 +45,7 @@ function About() {
 
     return (
         <AnimatePresence>
-            <Grids className="">
+            <Grids className="my-40">
                 <div className="p-4 flex flex-col md:p-0 md:col-span-2 md:pl-10 gap-4 md:gap-10 text-[40px] md:text-[48px] lg:text-[56px] leading-[1.15]">
                     <p className='text-[14px] font-bold uppercase text-orange-500'>About</p>
                     <div ref={quote}>
@@ -77,7 +77,7 @@ function About() {
                         </Link>
                     </div>
                 </div>
-                <div className='overflow-hidden relative'>
+                <div className='overflow-hidden relative rounded-xl'>
                     <motion.div
                         variants={imgSlideUp}
                         animate={isInView ? "open" : "closed"}
@@ -87,7 +87,7 @@ function About() {
                             src={profile.src}
                             height={1080}
                             width={800}
-                            className='object-cover'
+                            className='object-cover rounded-xl'
                         />
                     </motion.div>
                 </div>

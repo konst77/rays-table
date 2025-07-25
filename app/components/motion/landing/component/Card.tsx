@@ -10,48 +10,37 @@ import { useInView, motion, AnimatePresence } from 'motion/react'
 const recipes = [
     {
         title: "Best Chicken Boil",
-        description: "hi",
+        description: "High protein, high satisfaction, and exceptionally easy.",
         href: 'recipes/chicken',
         alt: "rice and chicken",
         source: chicken,
         height: 560,
         width: 560,
-        className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "EEE3AB"
+        className: "w-full md:h-full  object-cover saturate-[1.25]",
+        color: "f1f1f5"
     },
     {
         title: "Ray's Original Curry",
-        description: "hi",
+        description: "Mixed diversity, culture, and identity in one.",
         href: 'recipes/curry',
         alt: "curry",
         source: curry,
         height: 560,
         width: 560,
-        className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "80A1C1"
+        className: "w-full md:h-full  object-cover saturate-[1.25]",
+        color: "f1f1f5"
     },
     {
         title: "Sweet Dreams Sangria",
-        description: "hi",
+        description: "We desire what we can't have the most.",
         href: 'recipes/sangria',
         alt: "sangria",
         source: sangria,
         height: 560,
         width: 560,
-        className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "D9CFC1"
+        className: "w-full md:h-full  object-cover saturate-[1.25]",
+        color: "f1f1f5"
     },
-    {
-        title: "Clam Clam, Vongole",
-        description: "hi",
-        href: 'recipes/vongole',
-        alt: "vongole",
-        source: sangria,
-        height: 560,
-        width: 560,
-        className: "w-full md:h-[560px] object-cover saturate-[1.25]",
-        color: "BA3F1D"
-    }
 ]
 
 function Card() {
@@ -77,24 +66,27 @@ function Card() {
     return (
         <div className='md:col-span-full'>
             <AnimatePresence>
-                <div ref={card} className='flex flex-col md:grid md:grid-cols-2 gap-8'>
+                <div ref={card} className='flex flex-col md:flex-row overflow-hidden gap-4'>
                     {
                         recipes.map((recipes, index) => {
                             return (
-                                <div key={recipes.title} className='overflow-hidden relative'>
+                                <div key={recipes.title}
+                                    className='overflow-hidden relative max-w-[800px]'
+                                >
                                     <motion.div
                                         variants={slideUp}
                                         custom={index}
                                         animate={isInView ? "open" : "closed"}
-                                        className='flex flex-col md:grid md:grid-cols-2 max-h-[440px]'>
-                                        <div className='p-4 md:p-10 h-full flex flex-col  order-2 md:order-1 items-start justify-between'
-                                            style={{ backgroundColor: `#${recipes.color}` }}
+                                        className='flex flex-col md:grid md:grid-cols-2 rounded-2xl'
+                                        style={{ backgroundColor: `#${recipes.color}` }}
+                                    >
+                                        <div className='p-4 md:p-6 h-full flex flex-col mb-4 md:mb-8 order-2 md:order-1 items-start justify-between'
                                         >
-                                            <div className='flex flex-col gap-4 md:gap-8'>
+                                            <div className='flex flex-col gap-4'>
                                                 <h3 className='text-[24px] md:text-[32px] leading-[1.15]'>
                                                     {recipes.title}
                                                 </h3>
-                                                <p className='text-[14px] md:text-[18px] text-[#767676]'>
+                                                <p className='text-[14px] md:text-[16px] text-[#555]'>
                                                     {recipes.description}
                                                 </p>
                                             </div>
@@ -103,15 +95,15 @@ function Card() {
                                                 href={recipes.href}
                                                 className='self-end'
                                             >
-                                                <Button variant={'link'} className='text-[#767676]'>
+                                                <Button variant={'secondary'} className='text-[#333]'>
                                                     <p>
-                                                        Read our story
+                                                        Read story
                                                     </p>
                                                 </Button>
                                             </Link>
                                         </div>
 
-                                        <div className='overflow-hidden'>
+                                        <div className='overflow-hidden m-5 rounded-xl'>
                                             <OptimizedImage
                                                 alt={recipes.alt}
                                                 src={recipes.source.src}

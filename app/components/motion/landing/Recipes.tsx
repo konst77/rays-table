@@ -28,12 +28,12 @@ function Recipes() {
 
     return (
         <AnimatePresence>
-            <Grids className="bg-white text-black my-40 md:mt-20">
+            <Grids className="bg-white text-black my-60 md:mt-20">
                 {/* Grid for featured recipes, make it dynamic? */}
-                <div className="flex flex-col md:col-span-2 p-4 md:p-10 gap-4 md:gap-10">
+                <div className="flex flex-col md:col-span-full items-start p-4 md:p-10 gap-4 md:gap-10">
                     <p className='text-[14px] font-bold uppercase text-orange-500'>Featured Recipes</p>
                     <div ref={feature}>
-                        <div className='flex relative'>
+                        <div className='flex relative max-w-[560px]'>
                             <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
                                 {
                                     phrase.split(" ").map((word, index) => {
@@ -50,11 +50,8 @@ function Recipes() {
                             </h2>
                         </div>
                     </div>
-                </div>
-                <div className="flex flex-col items-start md:col-span-1 p-4 md:p-10 gap-4 md:gap-10">
                     <Link
                         href={'/recipes'}
-                        className='self-end'
                     >
                         <Button variant={'link'}>
                             <p className='text-[#767676]'>

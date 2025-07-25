@@ -21,8 +21,8 @@ function Footer() {
 
   const navItems: NavItem[] = [
     {
-      href: "/",
-      label: "Main",
+      href: "/home",
+      label: "Home",
     },
     {
       href: "/recipes",

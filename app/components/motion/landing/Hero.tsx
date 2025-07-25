@@ -134,13 +134,13 @@ function Hero() {
                     ref={heading}
                     variants={photo}
                     animate={isInView ? "open" : "closed"}
-                    className="col-span-full w-full h-full md:col-span-2">
+                    className="col-span-full w-full h-full md:col-span-2 overflow-hidden rounded-xl">
                     <OptimizedImage
                         src={dummy.src}
                         height={800}
                         width={1680}
                         alt="dummy-photo"
-                        className="w-full h-full"
+                        className="w-full h-full rounded-xl"
                     />
                 </motion.div>
             </Grids>
