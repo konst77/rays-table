@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.image {
-  @apply saturate-0 duration-300
-}
-
-.image:hover {
-  @apply saturate-100 duration-300
-}
-
-
 
 @layer base {
   :root {

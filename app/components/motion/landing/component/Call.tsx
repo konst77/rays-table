@@ -11,6 +11,7 @@ function Call() {
 
     return (
         <Button
+            variant={'default'}
             onClick={scrollToSection}
         >
             <p>

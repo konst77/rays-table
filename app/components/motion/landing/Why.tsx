@@ -3,10 +3,13 @@
 import React, { useRef } from 'react'
 import Grids from '../../grids'
 import { useInView, motion, AnimatePresence } from 'motion/react';
+import AnimatedIcon from './component/AnimatedIcon';
+
+
 
 
 function Why() {
-    const phrase = "Experience from a small home kitchen to a large-scale restaurant"
+    const phrase = "10 year experience in home kitchen to a large-scale restaurant"
     const feature = useRef(null)
     const isInView = useInView(feature)
 
@@ -45,46 +48,81 @@ function Why() {
 
     return (
         <AnimatePresence>
-            <Grids className='bg-white text-black my-40 md:mt-20'>
-                <div className="flex flex-col md:col-span-1 items-start p-4 md:p-10 gap-4 md:gap-10">
-                    <p className='text-[14px] font-bold uppercase text-orange-500'>Our Principle</p>
-                    <div ref={feature}>
-                        <div className='flex relative max-w-[560px]'>
-                            <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
-                                {
-                                    phrase.split(" ").map((word, index) => {
-                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>
-                                            <motion.span variants={slideUp}
-                                                custom={index}
-                                                animate={isInView ? "open" : "closed"}
-                                                key={index}>
-                                                {word}
-                                            </motion.span>
-                                        </span>
-                                    })
-                                }
-                            </h2>
+            <Grids className='bg-orange-50 text-black my-40 md:mt-20'>
+                <div className="flex flex-col md:col-span-full items-center justify-center p-4 md:p-10">
+                    <div className='max-w-[880px] flex flex-col gap-4 md:gap-10 text-center'>
+                        <p className='text-[14px] font-bold uppercase text-orange-500'>Our values</p>
+                        <div ref={feature}>
+                            <div className='flex relative'>
+                                <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
+                                    {
+                                        phrase.split(" ").map((word, index) => {
+                                            return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>
+                                                <motion.span variants={slideUp}
+                                                    custom={index}
+                                                    animate={isInView ? "open" : "closed"}
+                                                    key={index}>
+                                                    {word}
+                                                </motion.span>
+                                            </span>
+                                        })
+                                    }
+                                </h2>
+                            </div>
                         </div>
                     </div>
+                    <div className='flex flex-col gap-4 md:col-span-full md:grid md:grid-cols-3 p-4 mt-10 max-w-[1080px]'>
+                        <div className='bg-orange-100 col-span-2 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
+                            <AnimatedIcon variant='eye' />
+                            <h4 className='text-[24px] md:text-[32px] leading-[1.15]'>
+                                Diverse and Cultural
+                            </h4>
+                            <p className='text-[14px] md:text-[16px] text-[#767676]'>
+                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
+                                <br />
+                                <br />
+                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                            </p>
+                        </div>
+                        <div className='bg-orange-100 col-span-1 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
+                            <AnimatedIcon variant='chicken' />
+                            <h4 className='text-[24px] md:text-[32px] leading-[1.15]'>
+                                Cost efficient
+                            </h4>
+                            <p className='text-[14px] md:text-[16px] text-[#767676]'>
+                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
+                                <br />
+                                <br />
+                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                            </p>
+                        </div><div className='bg-orange-100 col-span-1 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
+                            <AnimatedIcon variant='heart' />
+                            <h4 className='text-[24px] md:text-[32px] leading-[1.15]'>
+                                Health conscious
+                            </h4>
+                            <p className='text-[14px] md:text-[16px] text-[#767676]'>
+                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
+                                <br />
+                                <br />
+                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                            </p>
+                        </div>
+                        <div className='bg-orange-100 col-span-2 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
+                            <AnimatedIcon variant='note' />
+                            <h4 className='text-[24px] md:text-[32px] leading-[1.15]'>
+                                Restaurant secrets
+                            </h4>
+                            <p className='text-[14px] md:text-[16px] text-[#767676]'>
+                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
+                                <br />
+                                <br />
+                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-                <div className='col-span-2 grid grid-row-3 gap-4 text-black bg-orange-100 p-4 md:p-40 rounded-xl'>
-                    {
-                        value.map((value, index) => {
-                            return (
-                                <div key={index} className='h-full w-full p-4 md:p-10 border border-[#767676] rounded-xl'>
-                                    <div className=''>
-                                        <h4>
-                                            {value.valueName}
-                                        </h4>
-                                        <p>
-                                            {value.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+
             </Grids>
         </AnimatePresence>
     )

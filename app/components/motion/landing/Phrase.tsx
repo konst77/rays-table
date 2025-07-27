@@ -26,12 +26,12 @@ function Phrase() {
     return (
         <AnimatePresence>
             <Grids className='bg-[#fff] text-[#000] my-40 md:py-40 md:p-10'>
-                <div className="flex flex-col gap-10 p-4 md:p-10 md:col-span-2 self-center
-            text-[40px] md:text-[56px] lg:text-[80px] leading-[1.15]
+                <div className="flex flex-col gap-10 p-4 md:p-10 md:col-span-full w-full items-center justify-center
+            text-[40px] md:text-[56px] lg:text-[80px] leading-[1.15] text-center
             ">
                     <p className='text-[12px] md:text-[14px] font-bold uppercase text-orange-500'>What we do</p>
                     <div ref={description}>
-                        <div className='flex relative'>
+                        <div className='flex relative max-w-[880px]'>
                             <h1>
                                 {
                                     phrase.split(" ").map((word, index) => {
