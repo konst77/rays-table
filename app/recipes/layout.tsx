@@ -6,11 +6,9 @@ export default function RecipesLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body>
-                {children}
-                <Footer />
-            </body>
-        </html>
+        <div>
+            {children}
+            <Footer />
+        </div>
     );
 }

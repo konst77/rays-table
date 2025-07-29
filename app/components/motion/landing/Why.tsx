@@ -90,10 +90,7 @@ function Why() {
                                 Cost efficient
                             </h4>
                             <p className='text-[14px] md:text-[16px] text-[#767676]'>
-                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
-                                <br />
-                                <br />
-                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                                Delicious doesn’t have to be expensive. Our meals are crafted to be as budget-friendly as they are bold — proving that creativity beats cost every time.
                             </p>
                         </div><div className='bg-orange-100 col-span-1 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
                             <AnimatedIcon variant='heart' />
@@ -101,10 +98,7 @@ function Why() {
                                 Health conscious
                             </h4>
                             <p className='text-[14px] md:text-[16px] text-[#767676]'>
-                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
-                                <br />
-                                <br />
-                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                                Healthy should still taste like home. We balance flavor and nutrition with carefully chosen ingredients and thoughtful techniques.
                             </p>
                         </div>
                         <div className='bg-orange-100 col-span-2 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
@@ -113,10 +107,7 @@ function Why() {
                                 Restaurant secrets
                             </h4>
                             <p className='text-[14px] md:text-[16px] text-[#767676]'>
-                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
-                                <br />
-                                <br />
-                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                                Behind every dish is a little magic — borrowed from kitchens where technique meets instinct. We break down pro tips and habits that turn everyday meals into unforgettable experiences.
                             </p>
                         </div>
 
