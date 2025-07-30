@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icon" type="image/png" sizes="144x144" />
+        <link rel="icon" href="/icon"  />
       </head>
       <body
         className={`${instrumentSerif.className} ${instrumentSans.variable} antialiased mb-16 md:mb-0`}
