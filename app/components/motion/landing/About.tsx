@@ -8,7 +8,7 @@ import OptimizedImage from '../../OptimizedImage'
 import profile from '@/public/img/profile-dummy.jpg'
 
 function About() {
-    const phrase = "Cooking a dish is a way for me to preserve a connection with the past. A table is how I see the whole."
+    const phrase = "A dish is a way for me to preserve my past. A table is how I connect with everyone."
     const quote = useRef(null)
     const isInView = useInView(quote)
 
@@ -53,7 +53,7 @@ function About() {
                             <h1 className=''>
                                 {
                                     phrase.split(" ").map((word, index) => {
-                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-3'>
+                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>
                                             <motion.span variants={slideUp}
                                                 custom={index}
                                                 animate={isInView ? "open" : "closed"}

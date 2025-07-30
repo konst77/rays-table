@@ -45,7 +45,7 @@ function Hero() {
 
     return (
         <AnimatePresence>
-            <div className='text-[#fff] relative h-[95vh]'>
+            <div className='text-[#fff] relative h-[95vh] bg-black'>
                 <div className="flex flex-col h-full items-center justify-center gap-4 md:pt-0 md:pr-0 md:p-10 p-4  md:col-span-full backdrop-blur-xl">
                     <div>
                         <OptimizedImage
@@ -62,7 +62,7 @@ function Hero() {
                             <h1 className="text-center text-[48px] md:text-[56px] lg:text-[102px] leading-[1.15]">
                                 {
                                     phrase.split(" ").map((word, index) => {
-                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>
+                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>
                                             <motion.span variants={slideUp}
                                                 custom={index}
                                                 animate={isInView ? "open" : "closed"}
@@ -94,7 +94,7 @@ function Hero() {
                     </motion.div>
                 </div>
                 {/*dummy photo*/}
-                <Shader className="absolute top-0 h-full w-full -z-10" />
+                {/*<Shader className="absolute top-0 h-full w-full -z-10" /> */}
             </div>
         </AnimatePresence>
     )

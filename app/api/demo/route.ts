@@ -9,7 +9,6 @@ export async function POST(req: NextRequest) {
     try {
         // 1. Read incoming request
         const body = await req.json();
-        console.log('📨 Incoming request body:', body);
 
         const { email } = body;
 
@@ -34,7 +33,6 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ message: 'Database error' }, { status: 500 });
         }
 
-        console.log('✅ Email stored in Supabase:', email);
 
         // 4. Send confirmation email via Resend
         const emailResponse = await resend.emails.send({

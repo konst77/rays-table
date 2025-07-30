@@ -7,15 +7,11 @@ const openai = new OpenAI({
 
 export async function POST(req: NextRequest) {
     try {
-        // 1️⃣ Check that your API key is loaded
-        console.log('🔑 OPENAI_API_KEY present?', !!process.env.OPENAI_API_KEY);
 
         // 2️⃣ Inspect the incoming request
         const body = await req.json();
-        console.log('📨 Incoming request body:', body);
 
         const { topic } = body;
-        console.log('📚 topic:', topic);
 
         // 3️⃣ Validate input
         if (!topic || typeof topic !== 'string') {
@@ -44,7 +40,6 @@ export async function POST(req: NextRequest) {
         });
 
         // 5️⃣ Inspect OpenAI’s response
-        console.log('🤖 OpenAI response:', completion.choices[0].message);
 
         const message = completion.choices[0].message.content;
         return NextResponse.json({ suggestions: message });

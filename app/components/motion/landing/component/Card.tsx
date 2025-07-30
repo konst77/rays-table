@@ -9,37 +9,34 @@ import { useInView, motion, AnimatePresence } from 'motion/react'
 
 const recipes = [
     {
-        title: "Best Chicken Boil",
+        title: "Chicken Boil",
         description: "High protein, high satisfaction, and exceptionally easy.",
         href: 'recipes/chicken',
         alt: "rice and chicken",
         source: chicken,
         height: 560,
         width: 560,
-        className: "w-full md:h-full  object-cover saturate-[1.25]",
-        color: "f1f1f5"
+        className: "w-full h-full  object-cover saturate-[1.25]",
     },
     {
-        title: "Ray's Original Curry",
+        title: "Ray's Curry",
         description: "Mixed diversity, culture, and identity in one.",
         href: 'recipes/curry',
         alt: "curry",
         source: curry,
         height: 560,
         width: 560,
-        className: "w-full md:h-full  object-cover saturate-[1.25]",
-        color: "f1f1f5"
+        className: "w-full h-full  object-cover saturate-[1.25]",
     },
     {
-        title: "Sweet Dreams Sangria",
+        title: "Sweet Sangria",
         description: "We desire what we can't have the most.",
         href: 'recipes/sangria',
         alt: "sangria",
         source: sangria,
         height: 560,
         width: 560,
-        className: "w-full md:h-full  object-cover saturate-[1.25]",
-        color: "f1f1f5"
+        className: "w-full h-full  object-cover saturate-[1.25]",
     },
 ]
 
@@ -52,11 +49,11 @@ function Card() {
             y: "25%",
             opacity: 0
         },
-        open: (i: number) => ({
+        open: {
             y: "0%",
             opacity: 1,
-            transition: { duration: 0.7, delay: 0.25 * i }
-        }),
+            transition: { duration: 0.7 }
+        },
         closed: {
             y: "-25%",
             opacity: 0,
@@ -66,19 +63,21 @@ function Card() {
     return (
         <div className='md:col-span-full'>
             <AnimatePresence>
-                <div ref={card} className='flex flex-col md:flex-row overflow-hidden gap-4'>
+                <div
+                ref={card}
+                className='flex flex-col md:grid md:grid-cols-2 overflow-hidden gap-4'>
                     {
                         recipes.map((recipes, index) => {
                             return (
-                                <div key={recipes.title}
+                                <motion.div 
+                                    key={recipes.title}
                                     className='overflow-hidden relative max-w-[800px]'
                                 >
                                     <motion.div
-                                        variants={slideUp}
-                                        custom={index}
-                                        animate={isInView ? "open" : "closed"}
-                                        className='flex flex-col md:grid md:grid-cols-2 rounded-2xl'
-                                        style={{ backgroundColor: `#${recipes.color}` }}
+                                    variants={slideUp}
+                                    animate={isInView ? "open" : "closed"}
+                                    custom={index}
+                                        className='flex flex-col md:grid md:grid-cols-2 h-full rounded-2xl bg-orange-50'
                                     >
                                         <div className='p-4 md:p-6 h-full flex flex-col mb-4 md:mb-8 order-2 md:order-1 items-start justify-between'
                                         >
@@ -86,16 +85,16 @@ function Card() {
                                                 <h3 className='text-[24px] md:text-[32px] leading-[1.15]'>
                                                     {recipes.title}
                                                 </h3>
-                                                <p className='text-[14px] md:text-[16px] text-[#555]'>
+                                                <p className='text-[14px] md:text-[16px]'>
                                                     {recipes.description}
                                                 </p>
                                             </div>
 
                                             <Link
                                                 href={recipes.href}
-                                                className='self-end'
+                                                className='md:self-end mt-4'
                                             >
-                                                <Button variant={'secondary'} className='text-[#333]'>
+                                                <Button variant={'link'} className='text-[#767676]'>
                                                     <p>
                                                         Read story
                                                     </p>
@@ -103,7 +102,7 @@ function Card() {
                                             </Link>
                                         </div>
 
-                                        <div className='overflow-hidden m-5 rounded-xl'>
+                                        <div className='overflow-hidden h-full rounded-xl'>
                                             <OptimizedImage
                                                 alt={recipes.alt}
                                                 src={recipes.source.src}
@@ -113,10 +112,19 @@ function Card() {
                                             />
                                         </div>
                                     </motion.div>
-                                </div>
+                                </motion.div>
                             )
                         })
                     }
+                    <Link
+                        href={'/recipes'}
+                    >
+                        <div className='flex w-full h-full min-h-[80px] justify-center items-center rounded-2xl overflow-hidden text-[#767676] border border-orange-50 duration-300 hover:bg-orange-500 hover:border-none hover:text-white'>
+                            <p>
+                                View all
+                            </p>
+                        </div>
+                    </Link>
                 </div>
             </AnimatePresence>
         </div >

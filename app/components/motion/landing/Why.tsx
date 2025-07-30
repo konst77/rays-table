@@ -9,7 +9,7 @@ import AnimatedIcon from './component/AnimatedIcon';
 
 
 function Why() {
-    const phrase = "10 year experience in home kitchen to a large-scale restaurant"
+    const phrase = "+10 YoE in home kitchen to a large-scale restaurant in one website"
     const feature = useRef(null)
     const isInView = useInView(feature)
 
@@ -27,29 +27,10 @@ function Why() {
         }
     }
 
-    const value = [
-        {
-            gif: '',
-            valueName: 'some kind of name',
-            description: 'This is some kind of a description'
-        },
-        {
-            gif: '',
-            valueName: 'some kind of name',
-            description: 'This is some kind of a description'
-        },
-        {
-            gif: '',
-            valueName: 'some kind of name',
-            description: 'This is some kind of a description'
-        },
-    ]
-
-
     return (
         <AnimatePresence>
             <Grids className='bg-orange-50 text-black my-40 md:mt-20'>
-                <div className="flex flex-col md:col-span-full items-center justify-center p-4 md:p-10">
+                <div className="flex flex-col md:col-span-full items-center justify-center md:p-10">
                     <div className='max-w-[880px] flex flex-col gap-4 md:gap-10 text-center'>
                         <p className='text-[14px] font-bold uppercase text-orange-500'>Our values</p>
                         <div ref={feature}>
@@ -57,7 +38,7 @@ function Why() {
                                 <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
                                     {
                                         phrase.split(" ").map((word, index) => {
-                                            return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>
+                                            return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>
                                                 <motion.span variants={slideUp}
                                                     custom={index}
                                                     animate={isInView ? "open" : "closed"}
@@ -71,17 +52,15 @@ function Why() {
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col gap-4 md:col-span-full md:grid md:grid-cols-3 p-4 mt-10 max-w-[1080px]'>
+                    <div className='flex flex-col gap-4 md:col-span-full md:grid md:grid-cols-3 mt-10 max-w-[1080px]'>
                         <div className='bg-orange-100 col-span-2 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>
                             <AnimatedIcon variant='eye' />
                             <h4 className='text-[24px] md:text-[32px] leading-[1.15]'>
                                 Diverse and Cultural
                             </h4>
                             <p className='text-[14px] md:text-[16px] text-[#767676]'>
-                                From a plate of hard-dried rice, broken eggshell egg fries, and almost burnt spams cut in unequal pieces.
-                                <br />
-                                <br />
-                                To perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic and chopped italian parsley.
+                                From a plate of hard-dried rice, broken eggshell fried rice, and burnt pans with smoke alarms —
+                                to perfectly al-dante pastas, fresh clams in white wine, and finely diced garlic with chopped italian parsley.
                             </p>
                         </div>
                         <div className='bg-orange-100 col-span-1 p-4 md:p-10 flex flex-col items-start gap-2 rounded-xl'>

@@ -1,14 +1,12 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import Grids from '../../grids'
 import Card from './component/Card'
-import Link from 'next/link'
 import { useRef } from 'react'
 import { useInView, motion, AnimatePresence } from 'motion/react'
 
 function Recipes() {
-    const phrase = "Take a glimpse on our table while you walk by."
+    const phrase = "Take a glimpse on our table while you scroll by."
     const feature = useRef(null)
     const isInView = useInView(feature)
 
@@ -37,7 +35,7 @@ function Recipes() {
                             <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
                                 {
                                     phrase.split(" ").map((word, index) => {
-                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-6'>
+                                        return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>
                                             <motion.span variants={slideUp}
                                                 custom={index}
                                                 animate={isInView ? "open" : "closed"}
@@ -50,15 +48,6 @@ function Recipes() {
                             </h2>
                         </div>
                     </div>
-                    <Link
-                        href={'/recipes'}
-                    >
-                        <Button variant={'link'}>
-                            <p className='text-[#767676]'>
-                                View all
-                            </p>
-                        </Button>
-                    </Link>
                 </div>
                 <Card />
             </Grids>

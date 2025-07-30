@@ -13,6 +13,7 @@ function Call() {
         <Button
             variant={'default'}
             onClick={scrollToSection}
+            className='bg-orange-500'
         >
             <p>
                 Join our newsletter
