@@ -13,7 +13,7 @@ export default function SeattleWeather() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_KEY // Replace this
+        const apiKey = process.env.OPENWEATHER_KEY // Replace this
         const url = `https://api.openweathermap.org/data/2.5/weather?q=Seattle,US&units=imperial&appid=${apiKey}`;
         const res = await fetch(url);
         console.log('Weather API Key:', process.env.NEXT_PUBLIC_OPENWEATHER_KEY);
