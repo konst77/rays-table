@@ -124,7 +124,7 @@ function Footer() {
         <p>Made with warmth</p>
         <Time />
         <Weather />
-        <p>© Ray Moon 2025</p>
+        <p>© K0nst 2025</p>
       </div>
       </div>
   )

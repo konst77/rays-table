@@ -1,14 +1,15 @@
+import AdminNav from "./component/AdminNav";
+
 export default function AdminLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-            >
-                {children}
-            </body>
-        </html>
+        <div className="flex flex-row bg-[#131313]">
+            <AdminNav />
+            {children}
+        </div>
+
     );
 }

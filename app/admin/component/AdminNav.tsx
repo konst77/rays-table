@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import logo from '@/public/img/logo.jpg'
 import Link from 'next/link';
+import { LogOut } from 'lucide-react';
 
 function AdminNav() {
 
@@ -23,7 +24,7 @@ function AdminNav() {
     }
 
     return (
-        <div className='fixed top-0 w-full px-6 py-4 z-10 bg-black border-b border-[#131313] flex flex-row items-center justify-between'>
+        <div className='top-0 w-[400px] h-screen z-10 bg-[#222] border-b border-[#131313] flex flex-col items-start justify-between'>
             <OptimizedImage
                 alt='logo'
                 height={40}
@@ -41,14 +42,15 @@ function AdminNav() {
                 </Button>
             </Link>
 
-            <Button
+            <div
                 onClick={handleSignOut}
-                className=""
+                className="w-full min-h-[64px] border-t border-[#333] cursor-pointer items-center text-white p-4 px-8 flex flex-row gap-4 duration-300 hover:bg-[#333]"
             >
+                <LogOut className='w-4 h-4' />
                 <p>
                     Sign Out
                 </p>
-            </Button>
+            </div>
         </div>
     )
 }

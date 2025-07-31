@@ -28,10 +28,10 @@ export default function NewsletterGenerator() {
     }
 
     return (
-        <div className="my-10 md:my-20 p-4 md:p-10 flex flex-col gap-4 md:gap-10 md:grid md:grid-cols-2">
+        <div className="my-10 p-4 md:p-10 flex flex-col gap-4 md:gap-10 md:grid md:grid-cols-2 text-white">
             {/* Topic input & generate */}
             <div className="md:min-h-[600px] space-y-2">
-                <h2 className="text-2xl font-bold">Newsletter Editor</h2>
+                <h2 className="text-2xl">Chat</h2>
                 <input
                     type="text"
                     value={topic}
