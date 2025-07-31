@@ -4,11 +4,9 @@ import { useInView, motion, AnimatePresence } from 'motion/react'
 import main from "@/public/img/main.svg"
 import OptimizedImage from '../../OptimizedImage'
 import Call from './component/Call'
-import Grids from '../../grids'
 import { useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import Shader from '../../shader-gradient'
 
 function Hero() {
     const phrase = "Recipes with soul. Stories with flavor."
@@ -85,9 +83,9 @@ function Hero() {
                         <Link
                             href={'/recipes'}
                         >
-                            <Button variant={'ghost'}>
+                            <Button variant={'ghost'} className='rounded-xl'>
                                 <p>
-                                    View our table
+                                    View our table recipes
                                 </p>
                             </Button>
                         </Link>

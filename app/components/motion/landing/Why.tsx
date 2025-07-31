@@ -29,8 +29,8 @@ function Why() {
 
     return (
         <AnimatePresence>
-            <Grids className='bg-orange-50 text-black my-40 md:mt-20'>
-                <div className="flex flex-col md:col-span-full items-center justify-center md:p-10">
+            <Grids className='bg-orange-50 text-black md:my-40 md:mt-20'>
+                <div className="flex flex-col md:col-span-full items-center justify-center py-10 md:p-10">
                     <div className='max-w-[880px] flex flex-col gap-4 md:gap-10 text-center'>
                         <p className='text-[14px] font-bold uppercase text-orange-500'>Our values</p>
                         <div ref={feature}>

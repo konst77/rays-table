@@ -43,7 +43,7 @@ export default function NewsletterGenerator() {
                 <button
                     onClick={() => generate(topic)}
                     disabled={loading || !topic.trim()}
-                    className="px-4 py-2 bg-green-600 text-white rounded disabled:opacity-50"
+                    className="px-4 py-2 bg-orange-500 text-white rounded disabled:opacity-50"
                 >
                     {loading ? 'Generating…' : 'Generate Draft'}
                 </button>

@@ -1,13 +1,11 @@
 'use client';
 
-import NewsletterGenerator from './component/NewsletterGenerator';
-
-function page() {
+function Dashboard() {
     return (
         <div>
-            <NewsletterGenerator />
+            Dashboard
         </div>
     )
 }
 
-export default page
+export default Dashboard

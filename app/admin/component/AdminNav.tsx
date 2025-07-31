@@ -3,11 +3,30 @@
 import { createClient } from '@/utils/supabase/client';
 import { useRouter } from 'next/navigation';
 import OptimizedImage from '@/app/components/OptimizedImage'
-import { Button } from '@/components/ui/button'
 import React from 'react'
 import logo from '@/public/img/logo.jpg'
 import Link from 'next/link';
-import { LogOut } from 'lucide-react';
+import { AppWindow, LogOut, MessageCircle, Notebook } from 'lucide-react';
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
+
+
+const navigation = [
+    {
+        href: '/admin',
+        name: 'Dashboard',
+        icon: AppWindow
+    },
+    {
+        href: '/admin/chat',
+        name: 'Chat',
+        icon: MessageCircle
+    },
+    {
+        href: '/admin/strapi',
+        name: 'Content',
+        icon: Notebook
+    },
+]
 
 function AdminNav() {
 
@@ -24,34 +43,49 @@ function AdminNav() {
     }
 
     return (
-        <div className='top-0 w-[400px] h-screen z-10 bg-[#222] border-b border-[#131313] flex flex-col items-start justify-between'>
-            <OptimizedImage
+        <Sidebar variant='sidebar'>
+      <SidebarHeader>
+      <OptimizedImage
                 alt='logo'
                 height={40}
                 width={80}
                 src={logo.src}
                 className='bg-none'
             />
-            <Link
-                href={'/admin/studio'}
-            >
-                <Button>
-                    <p>
-                        Sanity Studio
-                    </p>
-                </Button>
-            </Link>
-
-            <div
+      </SidebarHeader>
+      <SidebarContent>
+        <SidebarGroup>
+            <SidebarGroupLabel><p>Work</p></SidebarGroupLabel>
+            <SidebarMenu>
+                {navigation.map((items, index) => (
+                    <SidebarMenuButton key={items.name} className='rounded-xl'>
+                        <Link
+                    href={items.href}
+                    className='flex flex-row gap-2 items-center'
+                    >
+                        <items.icon className='w-4 h-4' />
+                        <p>
+                            {items.name}
+                        </p>
+                </Link>
+                    </SidebarMenuButton>
+                ))}
+            </SidebarMenu>
+        </SidebarGroup>
+        <SidebarGroup />
+      </SidebarContent>
+      <SidebarFooter>
+        <div
                 onClick={handleSignOut}
-                className="w-full min-h-[64px] border-t border-[#333] cursor-pointer items-center text-white p-4 px-8 flex flex-row gap-4 duration-300 hover:bg-[#333]"
+                className="w-full min-h-[64px] rounded-xl border border-[#f1f1f5] cursor-pointer items-center text-[#131313] p-4 px-8 flex flex-row gap-4 duration-300 hover:bg-[#e5e5e5]"
             >
                 <LogOut className='w-4 h-4' />
                 <p>
                     Sign Out
                 </p>
             </div>
-        </div>
+      </SidebarFooter>
+    </Sidebar>
     )
 }
 

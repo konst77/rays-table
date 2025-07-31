@@ -13,7 +13,7 @@ function Call() {
         <Button
             variant={'default'}
             onClick={scrollToSection}
-            className='bg-orange-500'
+            className='bg-orange-500 rounded-xl hover:bg-orange-700'
         >
             <p>
                 Join our newsletter
