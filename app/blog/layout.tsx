@@ -6,13 +6,11 @@ export default function AdminLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <div
-                className='antialiased mb-16 md:mb-0'
-            >
-                {children}
-                <Footer />
-            </div>
-        </html>
+        <div
+            className='antialiased mb-16 md:mb-0'
+        >
+            {children}
+            <Footer />
+        </div>
     );
 }

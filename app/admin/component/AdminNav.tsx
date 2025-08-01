@@ -6,7 +6,7 @@ import OptimizedImage from '@/app/components/OptimizedImage'
 import React from 'react'
 import logo from '@/public/img/logo.jpg'
 import Link from 'next/link';
-import { AppWindow, LogOut, MessageCircle, Notebook } from 'lucide-react';
+import { AppWindow, Laptop, LogOut, MessageCircle } from 'lucide-react';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 
 
@@ -22,9 +22,9 @@ const navigation = [
         icon: MessageCircle
     },
     {
-        href: '/admin/strapi',
-        name: 'Content',
-        icon: Notebook
+        href: 'https://intuitive-garden-31d1aa9fd4.strapiapp.com/admin',
+        name: 'Strapi CMS',
+        icon: Laptop
     },
 ]
 

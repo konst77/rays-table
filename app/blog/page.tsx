@@ -1,9 +1,12 @@
-import React from 'react'
+import Call from "./components/Call"
+
 
 function Blog() {
-    return (
-        <div>Blog</div>
-    )
+  return (
+    <div>
+        <Call />
+    </div>
+  )
 }
 
 export default Blog

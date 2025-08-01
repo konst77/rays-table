@@ -13,16 +13,14 @@ export default function SeattleWeather() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const apiKey = process.env.OPENWEATHER_KEY // Replace this
+        const apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_KEY // Replace this
         const url = `https://api.openweathermap.org/data/2.5/weather?q=Seattle,US&units=imperial&appid=${apiKey}`;
         const res = await fetch(url);
-        console.log('Weather API Key:', process.env.NEXT_PUBLIC_OPENWEATHER_KEY);
         if (!res.ok) {
           throw new Error(`API error: ${res.status}`);
         }
 
         const data = await res.json();
-        console.log('Weather API response:', data); // 👈 check this in console
 
         // Defensive checks
         if (!data?.main?.temp || !data.weather || !data.weather[0]) {
@@ -35,7 +33,6 @@ export default function SeattleWeather() {
 
         setWeather({ temp, description, icon });
       } catch (err: any) {
-        console.error('Weather fetch failed:', err);
         setError(err.message || 'Unknown error');
       }
     };
