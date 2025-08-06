@@ -89,7 +89,7 @@ function Footer() {
                 href={item.href}
                 className="md:text-[16px] p-2 md:p-0"
               >
-                <p className="text-[#767676] hover:text-[#f1f1f5] duration-150">{item.label}</p>
+                <p className={cn(pathname === item.href ? "duration-150 text-orange-500 hover:text-orange-300" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{item.label}</p>
               </Link>
             ))}
             </div>
@@ -101,7 +101,7 @@ function Footer() {
                 href={socialItems.href}
                 className="md:text-[16px] p-2 md:p-0"
                 >
-                  <p className={cn(pathname === socialItems.href ? "duration-150 text-orange-500 hover:text-orange-300" : "text-[#767676] hover:text-[#f1f1f5] duration-150")}>{socialItems.label}</p>
+                  <p className="text-[#767676] hover:text-[#f1f1f5] duration-150">{socialItems.label}</p>
                 </Link>
               ))}
             </div>
