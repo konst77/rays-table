@@ -140,6 +140,15 @@
   input {
     font-family: var(--font-instrument-sans), sans-serif;
   }
+
+  li {
+    font-family: var(--font-instrument-sans), sans-serif;
+  }
+
+  table {
+    font-family: var(--font-instrument-sans), sans-serif;
+  }
+
 }
 
 

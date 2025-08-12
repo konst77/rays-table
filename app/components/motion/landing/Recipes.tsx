@@ -31,7 +31,7 @@ function Recipes() {
                 <div className="flex flex-col md:col-span-full items-start p-4 md:p-10 gap-4 md:gap-10">
                     <p className='text-[14px] font-bold uppercase text-orange-500'>Featured Recipes</p>
                     <div ref={feature}>
-                        <div className='flex relative max-w-[560px]'>
+                        <div className='flex relative w-full min-w-[390px]'>
                             <h2 className='text-[40px] md:text-[56px] leading-[1.15]'>
                                 {
                                     phrase.split(" ").map((word, index) => {

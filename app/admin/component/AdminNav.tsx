@@ -21,11 +21,6 @@ const navigation = [
         name: 'Chat',
         icon: MessageCircle
     },
-    {
-        href: 'https://intuitive-garden-31d1aa9fd4.strapiapp.com/admin',
-        name: 'Strapi CMS',
-        icon: Laptop
-    },
 ]
 
 function AdminNav() {

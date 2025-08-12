@@ -1,4 +1,6 @@
+import { BottomNavbar } from "../components/bottom-nav";
 import Footer from "../components/Footer";
+import { MobileNav } from "../components/mobile-nav";
 
 export default function AdminLayout({
     children,
@@ -9,6 +11,8 @@ export default function AdminLayout({
         <div
             className='antialiased mb-16 md:mb-0'
         >
+            <BottomNavbar />
+            <MobileNav /> 
             {children}
             <Footer />
         </div>

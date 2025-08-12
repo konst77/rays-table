@@ -19,13 +19,13 @@ function Blog() {
             <div className="col-start-2 col-span-2 p-4 md:p-10 flex flex-col gap-4 items-end">
                 <ul className="space-y-4 w-full">
                     {posts.map(({ slug, title, date }) => (
-                        <div key={slug} className="p-2 border-b w-full">
-                            <li className="flex flex-row items-end justify-between">
+                        <div key={slug} className="p-2 border-b w-full duration-300 hover:text-orange-500">
+                            <h4 className="flex flex-row items-end justify-between">
                                 <Link href={`/blog/${slug}`} className="text-[24px] md:text-[32px]">
                                 {title}
                                 </Link>
                                 <span className="ml-2 text-[#767676] text-sm">{date}</span>
-                            </li>
+                            </h4>
                         </div>
                     ))}
                 </ul>

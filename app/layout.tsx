@@ -4,8 +4,6 @@ import { Analytics } from "@vercel/analytics/next"
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
-import { BottomNavbar } from "./components/bottom-nav"
-import { MobileNav } from "./components/mobile-nav";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -37,12 +35,8 @@ export default function RootLayout({
         <link rel="icon" href="/icon"  />
       </head>
       <body
-        className={`${instrumentSerif.className} ${instrumentSans.variable} antialiased mb-16 md:mb-0`}
+        className={`${instrumentSerif.className} ${instrumentSans.variable} antialiased`}
       >
-        {/* pre-launch
-        <BottomNavbar />
-        <MobileNav /> 
-        */}
         {children}
         <Toaster />
         <SpeedInsights />

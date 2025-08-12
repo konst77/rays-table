@@ -11,11 +11,12 @@ function Call() {
 
     return (
         <Button
-            variant={'default'}
+            variant={'ghost'}
+            size={'sm'}
             onClick={scrollToSection}
-            className='bg-orange-500 rounded-xl hover:bg-orange-700'
+            className='bg-gradient-to-r from-pink-500 via-orange-500 to-red-500 text-white hover:text-white flex flex-row items-center gap-1 px-3 py-2 rounded-[8px] overflow-hidden'
         >
-            <p>
+            <p className='z-10'>
                 Join our newsletter
             </p>
         </Button>

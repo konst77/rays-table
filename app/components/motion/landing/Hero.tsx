@@ -13,6 +13,11 @@ function Hero() {
     const heading = useRef(null)
     const isInView = useInView(heading)
 
+    const scrollToSection = () => {
+        const section = document.getElementById('newsletter');
+        section && window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+    };
+
     const slideUp = {
         initial: {
             y: "100%"
@@ -44,12 +49,12 @@ function Hero() {
     return (
         <AnimatePresence>
             <div className='text-[#fff] relative h-[95vh] bg-black'>
-                <div className="flex flex-col h-full items-center justify-center gap-4 md:pt-0 md:pr-0 md:p-10 p-4  md:col-span-full backdrop-blur-xl">
+                <div className="flex flex-col h-full items-start md:items-center justify-center gap-4 md:pt-0 md:pr-0 md:p-10 p-4  md:col-span-full backdrop-blur-xl">
                     <div>
                         <OptimizedImage
                             src={main.src}
-                            height={40}
-                            width={120}
+                            height={32}
+                            width={72}
                             alt="dummy-photo"
                             className="w-full h-[40px]"
                             priority={true}
@@ -57,13 +62,14 @@ function Hero() {
                     </div>
                     <div ref={heading} className='flex flex-col gap-4 max-w-[880px]'>
                         <div className='flex justify-center relative'>
-                            <h1 className="text-center text-[48px] md:text-[56px] lg:text-[102px] leading-[1.15]">
+                            <h1 className="text-start md:text-center text-pretty text-[48px] md:text-[56px] lg:text-[102px] leading-[1.15]">
                                 {
                                     phrase.split(" ").map((word, index) => {
                                         return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>
-                                            <motion.span variants={slideUp}
+                                            <motion.span 
+                                                variants={slideUp}
+                                                animate={isInView ? "open" : "close"}
                                                 custom={index}
-                                                animate={isInView ? "open" : "closed"}
                                                 key={index}>
                                                 {word}
                                             </motion.span>
@@ -76,16 +82,34 @@ function Hero() {
 
                     <motion.div
                         variants={button}
-                        animate={isInView ? "open" : "closed"}
+                        animate={slideUp}
                         className='flex flex-row gap-4 mt-10'
                     >
-                        <Call />
                         <Link
                             href={'/recipes'}
+                            className=' w-full h-ull'
                         >
-                            <Button variant={'ghost'} className='rounded-xl'>
+                            <Button 
+                            variant={'ghost'}
+                            onClick={scrollToSection}
+                            size={'lg'}
+                            className='bg-orange-500 round hover:bg-orange-300 flex flex-row items-center gap-1 px-3 py-2 rounded-[8px]'>
                                 <p>
-                                    View our table recipes
+                                    Join our Newsletter
+                                </p>
+                            </Button>
+                        </Link>
+
+                        <Link
+                            href={'/recipes'}
+                            className=' w-full h-ull'
+                        >
+                            <Button 
+                            variant={'ghost'}
+                            size={'lg'}
+                            className='border border-[#333] flex flex-row items-center gap-1 px-3 py-2 rounded-[8px]'>
+                                <p>
+                                    Our joyful recipes
                                 </p>
                             </Button>
                         </Link>

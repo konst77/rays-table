@@ -28,7 +28,7 @@ export default function NewsletterGenerator() {
     }
 
     return (
-        <div className="my-10 p-4 md:p-10 flex flex-col gap-4 md:gap-10 md:grid md:grid-cols-2 text-white">
+        <div className="p-4 md:p-10 flex flex-col gap-4 md:gap-10 md:grid md:grid-cols-4 text-black">
             {/* Topic input & generate */}
             <div className="md:min-h-[600px] space-y-2">
                 <h2 className="text-2xl">Chat</h2>
@@ -51,13 +51,13 @@ export default function NewsletterGenerator() {
 
             {/* Draft editor & regenerate */}
             {draft && (
-                <div className="space-y-2">
-                    <label className="font-medium">Draft Content</label>
+                <div className="space-y-2 col-span-3">
+                    <label className="text-2xl">Draft Content</label>
                     <textarea
                         value={draft}
                         onChange={(e) => setDraft(e.target.value)}
                         rows={10}
-                        className="w-full border p-2 rounded font-mono"
+                        className="w-full h-full border p-6 font-sans"
                     />
                     <button
                         onClick={() => generate(draft)}

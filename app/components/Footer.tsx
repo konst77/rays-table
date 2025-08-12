@@ -65,7 +65,7 @@ function Footer() {
   ]
 
   return (
-      <div className="pb-4 bg-black rounded-t-3xl">
+      <div className="bg-black rounded-t-3xl">
       <div id="newsletter" className="text-white relative rounded-3xl overflow-hidden z-0 shadow-2xl shadow-gray-900">
         <Grids className="bg-black/20 backdrop-blur-lg">
           <div className="p-4 md:p-10 w-full md:col-span-2 md:h-[360px]">
@@ -80,7 +80,7 @@ function Footer() {
             <SubscribeForm />
           </div>
 
-          <div className="md:h-[360px] flex flex-col md:flex-row gap-4 md:gap-20 items-start p-4 md:p-10 md:col-span-1">
+          <div className="h-full md:h-[360px] flex flex-row gap-4 md:gap-20 items-start justify-between md:justify-start p-4 md:p-10 md:col-span-1">
             <div className="flex flex-col items-start">
             <p className="text-[18px] mb-4">Navigate</p>
             {navItems.map((item) => (
