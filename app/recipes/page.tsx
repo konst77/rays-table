@@ -19,10 +19,10 @@ function Recipes() {
                     </div>
                 </div>
 
-                <div className="col-start-2 col-span-2 p-4 md:p-10 flex flex-col gap-4 items-end">
-                    <ul className="space-y-4 w-full">
+                <div className="col-start-2 col-span-2 p-4 md:p-10 flex flex-col items-end">
+                    <ul className="w-full">
                         {recipes.map(({ slug, title, date }) => (
-                            <div key={slug} className="p-2 border-b w-full duration-300 hover:text-orange-500">
+                            <div key={slug} className="p-4 border-b w-full duration-150 hover:text-orange-500">
                                 <h4 className="flex flex-row items-end justify-between">
                                     <Link href={`/recipes/${slug}`} className="text-[24px] md:text-[32px]">
                                         {title}

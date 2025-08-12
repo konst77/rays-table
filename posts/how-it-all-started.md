@@ -1,9 +1,11 @@
 ---
 title: "How Ray's Table all started."
-date: "2025-08-05"
+date: "2025 08 05"
 slug: "how-it-all-started"
 description: "If you were an onion, how would you be cooked?"
 ---
+
+
 
 ## Who is she?
 
@@ -26,6 +28,8 @@ It didn't take long to open my Google Maps and find the nearest Trader Joe's. Di
 
 After a long hauls of my research and comparing, Trader Joe's has the best value in my criteria of judgment. If you ever get interested in cooking, check them out if they are near you. Because I am not getting paid to give them promotions.
 
+
+
 ## The boring truth
 
 I hope you really didn't believe that above story is why I got into cooking. No, it all started because of my father.
@@ -36,8 +40,38 @@ I was happy with one thing though. My father learned a spaghetti dish that I can
 
 Do I know how to make the dish? No. Maybe one day, I will get to learn from him.
 
-## Motivation
 
-I grew up poor.
 
-My grandmother used to obtain EBT food cards and bought us bunch of SPAM, eggs, and white rice. We would always have some old kimchi.
+## Wealth gap of food
+
+I never realized I grew up from a low-income family until I started reading books. 
+
+Taste in food was something that uncovered your income class. This was not due to how expensive your grocery lists were each time. It's more about knowing what you are eating.
+
+In Korea, this specific culture in wealth gap from food were more clear. The riches always had meat on the table while the poor will eat large pot of soup dishes with rice. According to the royal history of Korea, the kings and the nobles avoided eating Guk-Bap which was soup over rice.
+
+In the states, it was a bit different.
+
+My grandmother used to obtain EBT food cards and bought us bunch of SPAM, eggs, and white rice. We would always have some old kimchi. This was similar to Hawaiian dishes, low-income races, and families within the region. People who enjoy these types of food prefers big dishes with cheap ingredients. 
+
+It's not about likes and dislikes. It's more of nostalgia and the past experience of hunger driving their preference. These people also tend to neglect European dishes and disconnect any associations from them.
+
+The marketing trap that makes people believe that European dishes were for 'special' occasions.
+
+
+
+## Some important data on food and wealth gaps
+
+* **Bigger burden:** The lowest-income households spend **about one-third** of their after-tax income on food, while the highest spend **under one-tenth**.
+* **Access gap:** Nearly **19 million people** live in low-income, low-access **food deserts** far from a full-service grocery store.
+* **Benefit gap:** The **maximum SNAP benefit per meal** (≈**\$2.84**, 2023) often falls **below** the average cost of a modest meal (≈**\$3.37**), creating a monthly shortfall.
+
+## What will Ray do about it?
+
+Ray's table isn't just to help you put delicious food on your table, it's purpose is to change the bias of how food is consumed. Since health educations are widely populating in schools and educational associations, the people involved still decide to not follow due to family heritage and common misconceptions. 
+
+"You are what you eat" is a powerful phrase that distinguishes these small habits in eating.
+
+I am working to help people create health-conscious choices, eat tastier food, and be happy with food.
+
+At the end of the day, food is definitely something that makes all of us happy and bring people together.

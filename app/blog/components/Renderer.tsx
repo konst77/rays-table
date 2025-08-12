@@ -16,22 +16,22 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
       components={{
         // Headings
         h1: ({ node, ...props }) => (
-          <h1 className="text-5xl mb-6" {...props} />
+          <h1 className="text-5xl mb-6 mt-6" {...props} />
         ),
         h2: ({ node, ...props }) => (
-          <h2 className="text-4xl mb-5" {...props} />
+          <h2 className="text-4xl mb-5 mt-6" {...props} />
         ),
         h3: ({ node, ...props }) => (
-          <h3 className="text-3xl mb-4" {...props} />
+          <h3 className="text-3xl mb-4 mt-6" {...props} />
         ),
         h4: ({ node, ...props }) => (
-          <h4 className="text-2xl mb-3" {...props} />
+          <h4 className="text-2xl mb-3 mt-6" {...props} />
         ),
         h5: ({ node, ...props }) => (
-          <h5 className="text-xl mb-2" {...props} />
+          <h5 className="text-xl mb-2 mt-6" {...props} />
         ),
         h6: ({ node, ...props }) => (
-          <h6 className="text-lg mb-2" {...props} />
+          <h6 className="text-lg mb-2 mt-6" {...props} />
         ),
 
         // Paragraph

@@ -2,6 +2,7 @@
 import { notFound } from 'next/navigation';
 import { MarkdownRenderer } from '@/app/blog/components/Renderer';
 import { getAllRecipeMeta, getRecipeBySlug } from '../lib/recipebook';
+import Title from '../component/Title';
 
 
 // 1. Tell Next which slugs to pre-render
@@ -24,9 +25,7 @@ export default async function RecipePage(props: {
     <div className="p-4 md:p-10 flex flex-col items-center">
       <article className="lg:max-w-7xl grid grid-cols-1 gap-4 md:gap-10 md:grid-cols-4">
         <section className="flex flex-col gap-4 md:col-span-2 md:min-h-[520px] justify-end">
-          <h1 className="text-[40px] md:text-[56px] lg:text-[128px] leading-[1] text-orange-500">
-            {recipe.title}
-          </h1>
+          <Title phrase={recipe.title} />
         </section>
         <section className="self-end mb-4">
           <p className="text-[14px] italic text-[#767676]">{recipe.description}</p>

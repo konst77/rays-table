@@ -1,6 +1,6 @@
 ---
-title: "Do you want to come over for some Ramen?"
-date: "2025-08-05"
+title: "The Best Ramen of All Time"
+date: "2025 08 05"
 slug: "ramen"
 description: "There is a Korean phrase that we ask instead of Netflix and chill. This is how we get them thinking."
 tags:
