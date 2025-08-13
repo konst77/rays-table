@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { MarkdownRenderer } from '@/app/blog/components/Renderer';
 import { getAllRecipeMeta, getRecipeBySlug } from '../lib/recipebook';
 import Title from '../component/Title';
+import ReadMoreRecipes from '../component/AdditionalRecipes';
 
 
 // 1. Tell Next which slugs to pre-render
@@ -37,6 +38,10 @@ export default async function RecipePage(props: {
           <MarkdownRenderer content={recipe.content} />
         </section>
       </article>
+      
+      <div className=''>
+        <ReadMoreRecipes excludeSlug={recipe.slug} />
+      </div>
     </div>
   );
 }

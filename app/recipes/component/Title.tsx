@@ -26,7 +26,7 @@ export default function Title({ phrase }: Props) {
 
   return(
     <div>
-        <h1 ref={title} className="text-[40px] md:text-[56px] lg:text-[128px] leading-[1] text-orange-500">
+          <h1 ref={title} className="text-[40px] md:text-[56px] lg:text-[128px] leading-[1] text-orange-500">
             {
               phrase.split(" ").map((word, index) => {
                   return <span key={index} className='relative overflow-hidden inline-flex mr-2 md:mr-4'>

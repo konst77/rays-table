@@ -48,17 +48,17 @@ function Footer() {
 
   const socialItems: socialItem[] = [
     {
-      href: "/",
+      href: "https://www.instagram.com/rays.table/",
       icon: "source",
       label: "Instagram",
     },
     {
-      href: "/",
+      href: "https://www.tiktok.com/@konst2958",
       icon: "source",
       label: "TikTok",
     },
     {
-      href: "/",
+      href: "https://www.threads.com/@rays.table",
       icon: "source",
       label: "Threads",
     },
@@ -99,6 +99,7 @@ function Footer() {
                 <Link
                 key={socialItems.label}
                 href={socialItems.href}
+                target="_blank"
                 className="md:text-[16px] p-2 md:p-0"
                 >
                   <p className="text-[#767676] hover:text-[#f1f1f5] duration-150">{socialItems.label}</p>

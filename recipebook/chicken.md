@@ -1,8 +1,14 @@
 ---
-title: "The Best Chicken Boil"
+title: "Boiled Chicken"
 date: "2025 08 11"
 slug: "chicken"
 description: "The most flexible, efficient, and cost effective dish of all time."
+tags:
+  - Best
+prepTime: "10 minutes"
+cookTime: "20 minutes (hands-off simmer)"
+totalTime: "30 minutes"
+yield: "1-2 servings"
 ---
 
 # Chicken Boil

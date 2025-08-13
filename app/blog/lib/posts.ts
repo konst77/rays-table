@@ -47,3 +47,10 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     content,                  // raw markdown for ReactMarkdown
   };
 }
+
+// lib/posts.ts
+export function getReadMorePosts(excludeSlug?: string, limit = 3) {
+  const all = getAllPostMeta(); // already sorted newest-first
+  const filtered = excludeSlug ? all.filter(p => p.slug !== excludeSlug) : all;
+  return filtered.slice(0, limit);
+}

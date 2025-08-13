@@ -2,6 +2,7 @@
 import { notFound } from 'next/navigation';
 import { getAllPostMeta, getPostBySlug, Post } from '../lib/posts';
 import { MarkdownRenderer } from '../components/Renderer';
+import AdditionalPosts from '../components/AddtionalPosts';
 
 // 1. Tell Next which slugs to pre-render
 export function generateStaticParams() {
@@ -37,6 +38,9 @@ export default async function PostPage(props: {
           <MarkdownRenderer content={post.content} />
         </section>
       </article>
+
+      <AdditionalPosts excludeSlug={post.slug} />
+
     </div>
   );
 }

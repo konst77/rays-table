@@ -4,7 +4,6 @@ import { BottomNavbar } from '../components/bottom-nav'
 import { MobileNav } from '../components/mobile-nav'
 import dummy from '@/public/img/dummy-photo.jpg'
 import Grids from '../components/grids'
-import OptimizedImage from '../components/OptimizedImage'
 
 function About() {
     return (
@@ -23,36 +22,46 @@ function About() {
                     </div>
                 </Grids>
                 <Grids className='py-10 col-span-full'>
-                    <div className='p-4 md:p-10 col-start-1'>
+                    <div className='p-4 md:p-10'>
                         <p className='text-[#767676]'>
-                            From a mixture of diverse cultures, people, and experiences, I was able to uncover the meaning of food.
-                            It's never only about what goes in and out of your body. The laughters, joy, and great memories create unforgetable bonds with others. It's the ultimate tool of gathering people into the table. Since the noble era of table manners, traditions, and even rituals.
+                            I was sent to the United States at 2007, camouflaged as a visit to my grandparents.
                             <br />
                             <br />
-                            Ray's table shares ideas of how we can all joyfully gather and experience each other to the core.
+                            "Will you be okay without us son?" 
+                            <br />
+                            <br />
+                            Imagine that's what you hear before you were left with your grandparents who you have never encountered before.
+                            <br />
+                            <br />
+                            I obviously didn't even have the brain development to understand what that meant at the time.
                         </p>
                     </div>
-                    <OptimizedImage
-                        alt='dummy image'
-                        src='https://images.unsplash.com/photo-1608731002187-d3448d224d18?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                        height={640}
-                        width={640}
-                        className='w-full h-full object-cover col-span-1 row-span-1 col-start-2'
-                    />
-                    <OptimizedImage
-                        alt='dummy image'
-                        src='https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                        height={2048}
-                        width={2048}
-                        className='h-fit object-cover row-span-2 col-start-3'
-                    />
-                    <OptimizedImage
-                        alt='dummy image'
-                        src='https://images.unsplash.com/photo-1590437084089-9f5ae1500176?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-                        height={1440}
-                        width={1440}
-                        className='w-full h-full object-cover col-span-2 col-start-1'
-                    />
+                    <div className='p-4 md:p-10'>
+                        <p className='text-[#767676]'>
+                            Because I was never under the influence of my mother's cooking, it was my grandmother who created this interesting taste bud of mine.
+                            <br />
+                            <br />
+                            She'd add a frozen veggie mix in a spaghetti sauce, add unheard ingredients because someone said it was healthy, or even create juices
+                            that were horrifying. (Trust me, horrifying)
+                            <br />
+                            <br />
+                            I don't know how many times I had to yuck trying to finish it because I felt bad for her. Until, I eventually had to tell her the truth.
+                        </p>
+                    </div>
+                    <div className='p-4 md:p-10'>
+                        <p className='text-[#767676]'>
+                            She was furious with the fact that her efforts were neglected to keep us healthy.
+                            <br />
+                            <br />
+                            But does food have to be one way or another? Why can't it be healthy, delicious, and cost effective?
+                            <br />
+                            <br />
+                            This is the answer that I came up with. A story I can share, and the life that I have been surviving to.
+                            <br />
+                            <br />
+                            This is Ray's Table.
+                        </p>
+                    </div>
                 </Grids>
             </div>
             <Footer />

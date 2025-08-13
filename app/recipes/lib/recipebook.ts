@@ -47,3 +47,9 @@ export async function getRecipeBySlug(slug: string): Promise<Recipe> {
     content,                  // raw markdown for ReactMarkdown
   };
 }
+
+export function getReadMoreRecipes(excludeSlug?: string, limit = 3) {
+  const all = getAllRecipeMeta(); // already sorted newest-first
+  const filtered = excludeSlug ? all.filter(p => p.slug !== excludeSlug) : all;
+  return filtered.slice(0, limit);
+}

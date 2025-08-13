@@ -1,11 +1,13 @@
 ---
-title: "The Best Ramen of All Time"
+title: "Instant Ramen"
 date: "2025 08 05"
 slug: "ramen"
 description: "There is a Korean phrase that we ask instead of Netflix and chill. This is how we get them thinking."
 tags:
-  - introduction
-  - welcome
+  - Fast
+prepTime: "10 minutes"
+cookTime: "5 minutes"
+totalTime: "15 minutes"
 ---
 
 # Shin Ramen
